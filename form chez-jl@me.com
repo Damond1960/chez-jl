@@ -1,7 +1,9 @@
-z-jl<form action="https://formsubmit.co/jl.damond@me.com" method="POST">
+<form action="https://formsubmit.co/jl.damond@me.com" method="POST">
 
   <input type="hidden" name="_subject" value="Nouvelle astuce – chez-JL">
   <input type="hidden" name="_captcha" value="false">
+  <input type="hidden" name="_template" value="table">
+  <input type="hidden" name="_next" value="https://chez-jl.com/merci.html">
 
   <label>Votre nom ou pseudo</label>
   <input type="text" name="nom" required>
