@@ -1,4 +1,4 @@
-z-jl<form action="https://formsubmit.co/contact@chez-jl.com" method="POST">
+z-jl<form action="https://formsubmit.co/jl.damond@me.com" method="POST">
 
   <input type="hidden" name="_subject" value="Nouvelle astuce – chez-JL">
   <input type="hidden" name="_captcha" value="false">
