@@ -1,4 +1,4 @@
-<form action="https://formsubmit.co/jl.damond@me.com" method="POST">
+<form action="https://formsubmit.co/jl.damond@gmail.com" method="POST">
 
   <input type="hidden" name="_subject" value="Nouvelle astuce – chez-JL">
   <input type="hidden" name="_captcha" value="false">
