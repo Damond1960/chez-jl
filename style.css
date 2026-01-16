@@ -1,84 +1,51 @@
 /* ===== Style général chez-JL ===== */
 
-body {.page-bricolage .header-bar {
-  background-color: #c8a165; /* brun clair */
-}
-      
-Correction structure HTML bricolage (header/nav)
-      
-header {
-  background: #2c3e50;
-  color: #fff;
-  padding: 20px;
-  text-align: center;
-}
-
-header h1 {
+body {
   margin: 0;
+  font-family: Arial, sans-serif;
 }
 
-nav {
-  background: #34495e;
-  padding: 10px;
+/* ===== HEADER ===== */
+.header-bar {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+  color: white;
+}
+
+.header-title {
+  flex: 1;
   text-align: center;
 }
 
-nav a {
-  color: #fff;
-  margin: 0 10px;
+.btn-retour {
+  background: rgba(255,255,255,0.25);
+  color: white;
+  padding: 8px 12px;
   text-decoration: none;
+  border-radius: 4px;
   font-weight: bold;
 }
 
-nav a:hover {
-  text-decoration: underline;
-}
-
+/* ===== CONTENU ===== */
 main {
   max-width: 900px;
   margin: auto;
-  padding: 20px;
-  background: #fff;
+  background: white;
+  padding: 30px;
 }
 
-h1, h2 {
-  color: #2c3e50;
-}
-
+/* ===== FOOTER ===== */
 footer {
-  background: #2c3e50;
-  color: #fff;
+  background: #ddd;
   text-align: center;
   padding: 15px;
-  margin-top: 30px;
+  font-size: 14px;
 }
 
-.btn {
-  display: inline-block;
-  background: #27ae60;
-  color: #fff;
-  padding: 10px 15px;
-  text-decoration: none;
-  border-radius: 4px;
-}
-
-.btn:hover {
-  /* ===== Couleurs par page ===== */
-
-.page-accueil {
-  background: #2ec4c6; /* bleu turquoise */
-}
-
-.page-bricolage {
-  background: #d8c3a5; /* brun clair */
-}
-
-.page-electricite {
-  background: #c0392b; /* rouge */
-}
-
-.page-maison {
-  background: #f2f2f2; /* gris clair */
-}
-  background: #219150;
-}
+/* ===== COULEURS PAR PAGE ===== */
+.page-accueil .header-bar { background: #1abc9c; }
+.page-bricolage .header-bar { background: #c8a165; }
+.page-electricite .header-bar { background: #c0392b; }
+.page-maison .header-bar { background: #ecf0f1; color:#333; }
