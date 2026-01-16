@@ -49,3 +49,25 @@ footer {
 .page-bricolage .header-bar { background: #c8a165; }
 .page-electricite .header-bar { background: #c0392b; }
 .page-maison .header-bar { background: #ecf0f1; color:#333; }
+
+/* ===== MENU ACCUEIL ===== */
+
+.header-accueil {
+  flex-direction: column;
+  text-align: center;
+}
+
+.menu-principal {
+  margin-top: 15px;
+}
+
+.menu-principal a {
+  margin: 0 12px;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.menu-principal a:hover {
+  text-decoration: underline;
+}
