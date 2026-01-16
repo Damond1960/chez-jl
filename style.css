@@ -3,7 +3,9 @@
 body {.page-bricolage .header-bar {
   background-color: #c8a165; /* brun clair */
 }
-
+      
+Correction structure HTML bricolage (header/nav)
+      
 header {
   background: #2c3e50;
   color: #fff;
