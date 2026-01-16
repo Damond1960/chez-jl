@@ -66,5 +66,22 @@ footer {
 }
 
 .btn:hover {
+  /* ===== Couleurs par page ===== */
+
+.page-accueil {
+  background: #2ec4c6; /* bleu turquoise */
+}
+
+.page-bricolage {
+  background: #d8c3a5; /* brun clair */
+}
+
+.page-electricite {
+  background: #c0392b; /* rouge */
+}
+
+.page-maison {
+  background: #f2f2f2; /* gris clair */
+}
   background: #219150;
 }
