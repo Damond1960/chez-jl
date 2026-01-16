@@ -5,21 +5,24 @@ body {
   font-family: Arial, sans-serif;
 }
 
-/* ===== HEADER ===== */
+/* ===== HEADER COMMUN ===== */
 .header-bar {
   display: flex;
-  align-items: center;
+  align-items: center;   /* centre verticalement */
+  justify-content: center; /* centre horizontalement les titres */
   gap: 20px;
   padding: 20px;
   color: white;
 }
 
 .header-title {
-  flex: 1;
   text-align: center;
 }
 
+/* Bouton retour */
 .btn-retour {
+  position: absolute; /* pour rester à gauche */
+  left: 20px;
   background: rgba(255,255,255,0.25);
   color: white;
   padding: 8px 12px;
@@ -27,6 +30,11 @@ body {
   border-radius: 4px;
   font-weight: bold;
 }
+
+/* Couleurs par page */
+.page-creation .header-bar { background-color: #9b59b6; } /* violet clair */
+.page-objets-anciens .header-bar { background-color: #f39c12; } /* orange chaud */
+
 
 /* ===== CONTENU ===== */
 main {
