@@ -7,34 +7,34 @@ body {
 
 /* ===== HEADER COMMUN ===== */
 .header-bar {
-  display: flex;
-  align-items: center;   /* centre verticalement */
-  justify-content: center; /* centre horizontalement les titres */
-  gap: 20px;
+  background-color: #c8a165; /* couleur par défaut, à changer par page */
   padding: 20px;
   color: white;
-}
-
-.header-title {
   text-align: center;
 }
 
-/* Bouton retour */
+.header-content {
+  display: flex;
+  flex-direction: column; /* bouton, titre, slogan verticalement */
+  align-items: center;    /* centre horizontalement tout */
+  gap: 10px;
+}
+
 .btn-retour {
-  position: absolute; /* pour rester à gauche */
-  left: 20px;
   background: rgba(255,255,255,0.25);
   color: white;
   padding: 8px 12px;
   text-decoration: none;
   border-radius: 4px;
   font-weight: bold;
+  font-size: 16px;
 }
 
-/* Couleurs par page */
-.page-creation .header-bar { background-color: #9b59b6; } /* violet clair */
-.page-objets-anciens .header-bar { background-color: #f39c12; } /* orange chaud */
-
+.page-bricolage .header-bar { background-color: #c8a165; }
+.page-electricite .header-bar { background-color: #c0392b; }
+.page-maison .header-bar { background-color: #ecf0f1; color: #333; }
+.page-creation .header-bar { background-color: #9b59b6; }
+.page-objets-anciens .header-bar { background-color: #f39c12; }
 
 /* ===== CONTENU ===== */
 main {
