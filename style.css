@@ -53,7 +53,27 @@ footer {
   padding: 15px;
   font-size: 14px;
 }
+/* ===== COULEURS RÉTRO ANNÉES 1950 ===== */
 
+.page-bricolage .header-bar {
+  background-color: #c6a87d; /* brun crème */
+}
+
+.page-electricite .header-bar {
+  background-color: #b24a3b; /* rouge rétro */
+}
+
+.page-creation .header-bar {
+  background-color: #a78bc3; /* violet clair */
+}
+
+.page-objets-anciens .header-bar {
+  background-color: #7fa6b8; /* bleu clair rétro */
+}
+
+.page-maison .header-bar {
+  background-color: #8fb59a; /* vert clair */
+}
 /* ===== COULEURS PAR PAGE ===== */
 .page-accueil .header-bar { background: #1abc9c; }
 .page-bricolage .header-bar { background: #c8a165; }
