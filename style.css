@@ -101,3 +101,12 @@ footer {
 .menu-principal a:hover {
   text-decoration: underline;
 }
+/* ===== BOUTON RETOUR : SUPPRESSION APPARENCE NAVIGATEUR ===== */
+
+.btn-retour {
+  appearance: none;
+  -webkit-appearance: none;
+  box-shadow: none;
+  border: none;
+  outline: none;
+}
