@@ -1,79 +1,141 @@
 <!DOCTYPE html>
 <html lang="fr">
- 
-  <head>
+<head>
   <meta charset="UTF-8">
   <title>Bricolage – chez-JL</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <style>
-   | Page               | Couleur          | Code      |
-| ------------------ | ---------------- | --------- |
-| 🔧 Bricolage       | Brun crème       | `#c6a87d` |
-    body { font-family: Arial; margin:0; background:#f4f4f4; }
-    header { background:#c6a87d; color:Brun crème ; padding:20px; text-align:center; }
-    main { max-width:900px; margin:auto; background:white; padding:30px; }
-    footer { background:#c6a87d; text-align:center; padding:15px; }
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f4f4f4;
+    }
+
+    /* Bandeau supérieur */
+    header {
+      background: #c6a87d; /* brun crème rétro */
+      color: #2b1d0f;
+      padding: 20px;
+      text-align: center;
+      position: relative;
+    }
+
+    .btn-retour {
+      position: absolute;
+      left: 20px;
+      top: 20px;
+      text-decoration: none;
+      background: rgba(255,255,255,0.4);
+      padding: 6px 12px;
+      border-radius: 4px;
+      color: #2b1d0f;
+      font-weight: bold;
+      appearance: none;
+      border: none;
+    }
+
+    main {
+      max-width: 900px;
+      margin: auto;
+      background: white;
+      padding: 30px;
+    }
+
+    h2 {
+      color: #2b1d0f;
+    }
+
+    /* Astuces */
+    .astuces {
+      margin-top: 30px;
+    }
+
+    .astuce {
+      border-bottom: 1px solid #ddd;
+      padding: 20px 0;
+    }
+
+    .themes {
+      font-size: 14px;
+      color: #6b4a2b;
+      font-style: italic;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 10px;
+      background: #2b1d0f;
+      color: white;
+      padding: 8px 14px;
+      border-radius: 4px;
+      text-decoration: none;
+      font-size: 14px;
+    }
+
+    footer {
+      background: #c6a87d;
+      text-align: center;
+      padding: 15px;
+      color: #2b1d0f;
+      font-size: 14px;
+    }
   </style>
 </head>
 
 <body class="page-bricolage">
-<body class="page-electricite">
-<body class="page-creation">
-<body class="page-objets-anciens">
-<body class="page-maison">
- <header class="header-bar">
 
-  <div class="header-content">
-    <a href="index.html" class="btn-retour">⬅ Accueil</a>
-    <h1>chez-JL</h1>
-    <p><section class="astuces">
-
-<article class="astuce">
-  <h3>Réparer une charnière sans la remplacer</h3>
-  <p class="themes">Réparation • Économie</p>
-  <p>
-    Une méthode simple pour renforcer une charnière abîmée
-    avec des matériaux courants.
-  </p>
- <a href="proposer-bricolage.html" class="btn">
-  ➕ Proposer une astuce bricolage
-</a>  <a href="#">🎥 Voir la vidéo</a>
-</article>
-
-<article class="astuce">
-  <h3>Ranger les vis avec des bocaux récupérés</h3>
-  <p class="themes">Récupération • Astuce rapide</p>
-  <p>
-    Une solution pratique pour organiser l’atelier
-    sans dépenser d’argent.
-  </p>
-</article>
-
-</section>
-</p>
-  </div>
-
+<header>
+  <a href="index.html" class="btn-retour">⬅ Accueil</a>
+  <h1>chez-JL</h1>
+  <p>Astuces bricolage</p>
 </header>
 
 <main>
-https://formspree.io/forms
-  <p>
-  Cette rubrique rassemble des astuces simples, pratiques et accessibles
-  pour réparer, améliorer et entretenir les objets du quotidien.
-</p>
 
-<ul>
-  <li>Réparations courantes</li>
-  <li>Astuces économiques</li>
-  <li>Amélioration de l’habitat</li>
-</ul>
+  <p>
+    Cette rubrique rassemble des astuces simples, pratiques et accessibles
+    pour réparer, améliorer et entretenir les objets du quotidien.
+  </p>
+
+  <ul>
+    <li>Réparations courantes</li>
+    <li>Astuces économiques</li>
+    <li>Amélioration de l’habitat</li>
+  </ul>
+
+  <section class="astuces">
+
+    <article class="astuce">
+      <h3>Réparer une charnière sans la remplacer</h3>
+      <p class="themes">Réparation • Économie</p>
+      <p>
+        Une méthode simple pour renforcer une charnière abîmée
+        avec des matériaux courants.
+      </p>
+      <a href="#" class="btn">🎥 Voir la vidéo</a>
+    </article>
+
+    <article class="astuce">
+      <h3>Ranger les vis avec des bocaux récupérés</h3>
+      <p class="themes">Récupération • Astuce rapide</p>
+      <p>
+        Une solution pratique pour organiser l’atelier
+        sans dépenser d’argent.
+      </p>
+    </article>
+
+  </section>
+
+  <a href="proposer-bricolage.html" class="btn">
+    ➕ Proposer une astuce bricolage
+  </a>
 
 </main>
 
- <footer> © chez-JL – Tous droits réservés</footer>
+<footer>
+  © chez-JL – Tous droits réservés
+</footer>
 
 </body>
- 
 </html>
-  
