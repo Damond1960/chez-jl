@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Proposer une création – chez-JL</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: white;
+    }
+
+    header {
+      background: #b6a4d8; /* violet clair création */
+      color: white;
+      padding: 20px;
+      text-align: center;
+      position: relative;
+    }
+
+    header a {
+      position: absolute;
+      left: 20px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 16px;
+      text-decoration: none;
+    }
+
+    main {
+      max-width: 700px;
+      margin: auto;
+      padding: 30px;
+      background: white;
+    }
+
+    h2 {
+      margin-top: 0;
+    }
+
+    label {
+      display: block;
+      margin-top: 15px;
+      font-weight: bold;
+    }
+
+    input, textarea, select {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      font-size: 14px;
+    }
+
+    textarea {
+      resize: vertical;
+      min-height: 120px;
+    }
+
+    .btn {
+      margin-top: 25px;
+      padding: 12px 18px;
+      background: #2c3e50;
+      color: white;
+      border: none;
+      font-size: 15px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .info {
+      font-size: 14px;
+      color: #555;
+      margin-top: 10px;
+    }
+
+    footer {
+      background: #b6a4d8;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      font-size: 14px;
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <a href="creation.html">⬅ Retour</a>
+  <h1>chez-JL</h1>
+  <p>Proposer une création</p>
+</header>
+
+<main>
+
+<h2>Partager une création</h2>
+
+<p>
+  Vous avez réalisé une création originale ?
+  Partagez-la avec la communauté chez-JL.
+</p>
+
+<form action="https://formspree.io/f/TON_ID_FORM" method="POST">
+
+  <label>Votre prénom ou pseudo</label>
+  <input type="text" name="auteur" required>
+
+  <label>Type de création</label>
+  <select name="categorie">
+    <option>Couture</option>
+    <option>Broderie</option>
+    <option>Dessin</option>
+    <option>Peinture</option>
+    <option>DIY / Artisanat</option>
+    <option>Autre</option>
+  </select>
+
+  <label>Description de la création (3 à 6 lignes)</label>
+  <textarea name="description" required></textarea>
+
+  <label>Lien vidéo (YouTube, Vimeo…)</label>
+  <input type="url" name="video">
+
+  <label>Lien vers des photos (Drive, Dropbox…)</label>
+  <input type="url" name="photos">
+
+  <label>Commentaires complémentaires</label>
+  <textarea name="commentaires"></textarea>
+
+  <button type="submit" class="btn">
+    📤 Envoyer ma création
+  </button>
+
+</form>
+
+<p class="info">
+  Les créations sont vérifiées avant publication.
+</p>
+
+</main>
+
+<footer>
+  © chez-JL – Tous droits réservés
+</footer>
+
+</body>
+</html>
