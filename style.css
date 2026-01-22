@@ -119,3 +119,17 @@ main {
   display: inline-block;
   background: #2b1d0f;
   c
+/* ===== CORRECTIONS FINALES ===== */
+
+/* Boutons noirs : texte BLANC lisible partout */
+a.btn,
+a.btn:visited,
+a.btn:hover {
+  color: #ffffff !important;
+  text-decoration: none !important;
+}
+
+/* Footer centré définitivement */
+footer {
+  text-align: center !important;
+}
