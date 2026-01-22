@@ -9,7 +9,7 @@
     body {
       margin: 0;
       font-family: Arial, sans-serif;
-      background: #f4f4f4;
+      background: white; /* plus de gris */
     }
 
     header {
@@ -20,7 +20,7 @@
       position: relative;
     }
 
-    .btn-retour {
+    header a {
       position: absolute;
       left: 20px;
       top: 50%;
@@ -34,19 +34,19 @@
     main {
       max-width: 900px;
       margin: auto;
-      background: white;
       padding: 30px;
-      text-align: center;
+      background: white;
     }
 
     .btn {
       display: inline-block;
-      margin-top: 25px;
-      padding: 12px 20px;
+      margin: 20px 0;
+      padding: 10px 16px;
       background: #2c3e50;
       color: white;
       text-decoration: none;
       border-radius: 4px;
+      font-size: 15px;
       font-weight: bold;
     }
 
@@ -63,28 +63,30 @@
 <body>
 
 <header>
-  <a href="index.html" class="btn-retour">⬅ Accueil</a>
+  <a href="index.html">⬅ Accueil</a>
   <h1>chez-JL</h1>
   <p>Création & loisirs</p>
 </header>
 
 <main>
-  <h2>Création & Loisirs créatifs</h2>
 
-  <p>
-    Cette rubrique est dédiée à la créativité sous toutes ses formes :
-    couture, broderie, dessin, peinture, fabrication artisanale
-    et projets DIY accessibles à tous.
-  </p>
+<a href="proposer-creation.html" class="btn">
+  ➕ Proposer une création
+</a>
 
-  <p>
-    Partagez vos idées, vos réalisations et vos techniques
-    pour inspirer la communauté chez-JL.
-  </p>
+<h2>Création & Loisirs créatifs</h2>
 
-  <a href="proposer-creation.html" class="btn">
-    ➕ Proposer une création
-  </a>
+<p>
+  Cette rubrique est dédiée à la créativité sous toutes ses formes :
+  couture, broderie, dessin, peinture, fabrication artisanale
+  et projets DIY accessibles à tous.
+</p>
+
+<p>
+  Partagez vos idées, vos réalisations et vos techniques
+  pour inspirer la communauté chez-JL.
+</p>
+
 </main>
 
 <footer>
