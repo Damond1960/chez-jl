@@ -4,155 +4,32 @@
   <meta charset="UTF-8">
   <title>Bricolage – chez-JL</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: #f4f4f4;
-    }
-
-    /* Bandeau supérieur */
-    header {
-      background: #c6a87d; /* brun crème rétro */
-      color: #2b1d0f;
-      padding: 20px;
-      text-align: center;
-      position: relative;
-    }
-
-    .btn-retour {
-      position: absolute;
-      left: 20px;
-      top: 20px;
-      text-decoration: none;
-      background: rgba(255,255,255,0.4);
-      padding: 6px 12px;
-      border-radius: 4px;
-      color: #2b1d0f;
-      font-weight: bold;
-      appearance: none;
-      border: none;
-    }
-
-    main {
-      max-width: 900px;
-      margin: auto;
-      background: white;
-      padding: 30px;
-    }
-
-    h2 {
-      color: #2b1d0f;
-    }
-
-    /* Astuces */
-    .astuces {
-      margin-top: 30px;
-    }
-
-    .astuce {
-      border-bottom: 1px solid #ddd;
-      padding: 20px 0;
-    }
-
-    .themes {
-      font-size: 14px;
-      color: #6b4a2b;
-      font-style: italic;
-    }
-
-    .btn {
-      display: inline-block;
-      margin-top: 10px;
-      background: #2b1d0f;
-      color: white;
-      padding: 8px 14px;
-      border-radius: 4px;
-      text-decoration: none;
-      font-size: 14px;
-    }
-
-    footer {
-      background: #c6a87d;
-      text-align: center;
-      padding: 15px;
-      color: #2b1d0f;
-      font-size: 14px;
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body class="page-bricolage">
 
 <header>
-  <a href="index.html" class="btn-retour">⬅ Accueil</a>
+  <!-- bouton ACCUEIL CENTRÉ -->
+  <a href="index.html" class="btn-retour btn-centre">⬅ Accueil</a>
+
   <h1>chez-JL</h1>
   <p>Astuces bricolage</p>
 </header>
 
 <main>
+  <h2>Bricolage</h2>
 
   <p>
-    Cette rubrique rassemble des astuces simples, pratiques et accessibles
-    pour réparer, améliorer et entretenir les objets du quotidien.
+    Astuces simples et efficaces pour réparer,
+    améliorer et entretenir les objets du quotidien.
   </p>
 
-  <ul>
-    <li>Réparations courantes</li>
-    <li>Astuces économiques</li>
-    <li>Amélioration de l’habitat</li>
-  </ul>
-
-<section class="astuces">
-
-  <article class="astuce" data-categorie="reparation economie">
-    <h3>Réparer une charnière sans la remplacer</h3>
-
-    <p class="themes">
-      🔧 Réparation • 💰 Économie
-    </p>
-
-    <p class="description">
-      Méthode simple pour renforcer une charnière abîmée
-      en utilisant des matériaux courants disponibles
-      dans n’importe quelle maison.
-    </p>
-
-    <div class="medias">
-      <!-- Vidéo optionnelle -->
-      <!-- <a href="#" class="btn">🎥 Voir la vidéo</a> -->
-
-      <!-- Images optionnelles -->
-      <!-- <img src="images/charniere-1.jpg" alt="Charnière réparée"> -->
-    </div>
-  </article>
-
-  <article class="astuce" data-categorie="rangement recuperation">
-    <h3>Ranger les vis avec des bocaux récupérés</h3>
-
-    <p class="themes">
-      ♻️ Récupération • ⚡ Astuce rapide
-    </p>
-
-    <p class="description">
-      Une solution simple et efficace pour organiser
-      les vis, clous et petites pièces sans dépenser
-      d’argent et en recyclant.
-    </p>
-
-    <div class="medias">
-      <!-- Images ou dessin plus tard -->
-    </div>
-  </article>
-
-</section>
-
+  <hr class="separation">
 
   <a href="proposer-bricolage.html" class="btn">
     ➕ Proposer une astuce bricolage
   </a>
-
 </main>
 
 <footer>
