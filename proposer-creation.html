@@ -13,7 +13,7 @@
     }
 
     header {
-      background: #b6a4d8; /* violet clair création */
+      background: #b6a4d8; /* violet clair rétro création */
       color: white;
       padding: 20px;
       text-align: center;
@@ -61,6 +61,17 @@
       min-height: 120px;
     }
 
+    /* Cases à cocher identiques à Bricolage */
+    .checkbox-group {
+      margin-top: 10px;
+    }
+
+    .checkbox-group label {
+      font-weight: normal;
+      display: block;
+      margin-bottom: 5px;
+    }
+
     .btn {
       display: inline-block;
       margin-top: 20px;
@@ -72,6 +83,7 @@
       font-size: 15px;
       font-weight: bold;
       cursor: pointer;
+      text-align: center;
     }
 
     footer {
@@ -112,15 +124,24 @@
   <label>Description (3 à 6 lignes)</label>
   <textarea name="description" required></textarea>
 
-  <label>Catégorie</label>
+  <label>Catégorie principale</label>
   <select name="categorie">
     <option>Couture</option>
     <option>Broderie</option>
     <option>Dessin</option>
     <option>Peinture</option>
-    <option>Création manuelle</option>
+    <option>DIY / Artisanat</option>
     <option>Autre</option>
   </select>
+
+  <label>Thèmes spécifiques (cases à cocher)</label>
+  <div class="checkbox-group">
+    <label><input type="checkbox" name="themes" value="Décoration"> Décoration</label>
+    <label><input type="checkbox" name="themes" value="Cadeau"> Cadeau</label>
+    <label><input type="checkbox" name="themes" value="Réutilisation"> Réutilisation</label>
+    <label><input type="checkbox" name="themes" value="Technique"> Technique</label>
+    <label><input type="checkbox" name="themes" value="Autre"> Autre</label>
+  </div>
 
   <label>Lien vidéo (facultatif)</label>
   <input type="url" name="video">
