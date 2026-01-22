@@ -6,162 +6,75 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: white;
+    body { margin:0; font-family: Arial, sans-serif; background:#f5efe6; }
+    header { background:#b6a4d8; color:#2b1d0f; padding:20px; text-align:center; }
+    .btn-retour {
+      display:inline-block; margin-bottom:10px; text-decoration:none;
+      background:rgba(255,255,255,0.5); padding:6px 12px; border-radius:4px;
+      color:#2b1d0f; font-weight:bold; appearance:none; border:none;
     }
-
-    header {
-      background: #b6a4d8; /* violet clair rétro création */
-      color: white;
-      padding: 20px;
-      text-align: center;
-      position: relative;
+    main { max-width:900px; margin:auto; background:#fff; padding:30px; }
+    h2 { color:#2b1d0f; }
+    label { display:block; margin:6px 0; }
+    textarea, input[type="text"], input[type="email"], input[type="url"] {
+      width:100%; padding:10px; margin:8px 0 16px 0;
+      border:1px solid #ccc; border-radius:4px;
     }
-
-    header a {
-      position: absolute;
-      left: 20px;
-      top: 50%;
-      transform: translateY(-50%);
-      color: white;
-      text-decoration: none;
-      font-weight: bold;
-      font-size: 16px;
+    .themes label { display:inline-block; margin-right:12px; }
+    button {
+      background:#2b1d0f; color:white; padding:12px 20px;
+      border:none; border-radius:5px; font-size:16px; cursor:pointer;
     }
-
-    main {
-      max-width: 900px;
-      margin: auto;
-      padding: 30px;
-      background: white;
-    }
-
-    h2 {
-      margin-top: 0;
-    }
-
-    label {
-      display: block;
-      margin-top: 15px;
-      font-weight: bold;
-    }
-
-    input, textarea, select {
-      width: 100%;
-      padding: 10px;
-      margin-top: 5px;
-      font-size: 14px;
-      box-sizing: border-box;
-    }
-
-    textarea {
-      resize: vertical;
-      min-height: 120px;
-    }
-
-    /* Cases à cocher identiques à Bricolage */
-    .checkbox-group {
-      margin-top: 10px;
-    }
-
-    .checkbox-group label {
-      font-weight: normal;
-      display: block;
-      margin-bottom: 5px;
-    }
-
-    .btn {
-      display: inline-block;
-      margin-top: 20px;
-      padding: 10px 16px;
-      background: #2c3e50;
-      color: white;
-      border: none;
-      border-radius: 4px;
-      font-size: 15px;
-      font-weight: bold;
-      cursor: pointer;
-      text-align: center;
-    }
-
-    footer {
-      background: #b6a4d8;
-      color: white;
-      text-align: center;
-      padding: 15px;
-      font-size: 14px;
-    }
+    footer { background:#ddd; text-align:center; padding:15px; }
   </style>
 </head>
 
 <body>
 
 <header>
-  <a href="creation.html">⬅ Retour</a>
+  <a href="creation.html" class="btn-retour">⬅ Retour</a>
   <h1>chez-JL</h1>
   <p>Proposer une création</p>
 </header>
 
 <main>
 
-<h2>Partager une création</h2>
+  <form action="https://formspree.io/f/TON_ID_FORM" method="POST">
 
-<p>
-  Utilisez ce formulaire pour proposer une création personnelle
-  (couture, dessin, peinture, broderie, DIY…).
-</p>
+    <h2>Description de la création</h2>
+    <textarea name="description" rows="5" required
+      placeholder="Explique ta création en au moins 3 lignes (quoi, comment, pourquoi)"></textarea>
 
-<form action="https://formspree.io/f/TON_ID_FORM" method="POST">
+    <h2>Thèmes</h2>
+    <div class="themes">
+      <label><input type="checkbox" name="themes" value="Couture"> Couture</label>
+      <label><input type="checkbox" name="themes" value="Broderie"> Broderie</label>
+      <label><input type="checkbox" name="themes" value="Dessin"> Dessin</label>
+      <label><input type="checkbox" name="themes" value="Peinture"> Peinture</label>
+      <label><input type="checkbox" name="themes" value="DIY / Artisanat"> DIY / Artisanat</label>
+      <label><input type="checkbox" name="themes" value="Autre"> Autre</label>
+    </div>
 
-  <label>Votre prénom ou pseudo</label>
-  <input type="text" name="auteur" required>
+    <h2>Vidéo (facultatif)</h2>
+    <input type="url" name="video" placeholder="Lien YouTube ou Vimeo">
 
-  <label>Titre de la création</label>
-  <input type="text" name="titre" required>
+    <h2>Images / Dessin (liens)</h2>
+    <input type="url" name="image1" placeholder="Lien image 1 (JPG, PNG, WEBP)">
+    <input type="url" name="image2" placeholder="Lien image 2 (optionnel)">
 
-  <label>Description (3 à 6 lignes)</label>
-  <textarea name="description" required></textarea>
+    <h2>Contact (facultatif)</h2>
+    <input type="text" name="nom" placeholder="Nom ou pseudo">
+    <input type="email" name="email" placeholder="Email">
 
-  <label>Catégorie principale</label>
-  <select name="categorie">
-    <option>Couture</option>
-    <option>Broderie</option>
-    <option>Dessin</option>
-    <option>Peinture</option>
-    <option>DIY / Artisanat</option>
-    <option>Autre</option>
-  </select>
+    <input type="hidden" name="_redirect" value="https://chez-jl.com/merci.html">
 
-  <label>Thèmes spécifiques (cases à cocher)</label>
-  <div class="checkbox-group">
-    <label><input type="checkbox" name="themes" value="Décoration"> Décoration</label>
-    <label><input type="checkbox" name="themes" value="Cadeau"> Cadeau</label>
-    <label><input type="checkbox" name="themes" value="Réutilisation"> Réutilisation</label>
-    <label><input type="checkbox" name="themes" value="Technique"> Technique</label>
-    <label><input type="checkbox" name="themes" value="Autre"> Autre</label>
-  </div>
-
-  <label>Lien vidéo (facultatif)</label>
-  <input type="url" name="video">
-
-  <label>Lien vers des photos (facultatif)</label>
-  <input type="url" name="photos">
-
-  <label>Informations complémentaires</label>
-  <textarea name="commentaires"></textarea>
-
-  <button type="submit" class="btn">
-    📤 Envoyer ma création
-  </button>
-
-</form>
+    <button type="submit">Envoyer ma création</button>
+  </form>
 
 </main>
 
 <footer>
-  © chez-JL – Tous droits réservés
+  © chez-JL
 </footer>
 
 </body>
