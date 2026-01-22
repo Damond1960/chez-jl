@@ -1,123 +1,121 @@
-/* ==========================
-   Styles généraux pour toutes les pages
-========================== */
+/* =========================
+   BASE GÉNÉRALE
+========================= */
+
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background: #f5efe6; /* fond principal */
+  background: #f5efe6;
   color: #2b1d0f;
 }
+
+h1, h2, h3 {
+  margin: 0 0 15px 0;
+}
+
+p {
+  line-height: 1.6;
+}
+
+a {
+  color: inherit;
+}
+
+/* =========================
+   HEADER / BANDEAU
+========================= */
 
 header {
   padding: 20px;
   text-align: center;
   position: relative;
-  color: #2b1d0f;
 }
 
+/* bouton retour / accueil */
 .btn-retour {
   display: inline-block;
-  margin-bottom: 10px;
-  text-decoration: none;
-  background: rgba(255, 255, 255, 0.5);
+  background: rgba(255,255,255,0.5);
   padding: 6px 12px;
   border-radius: 4px;
-  color: #2b1d0f;
   font-weight: bold;
-  border: none;
+  text-decoration: none;
+  margin-bottom: 10px;
 }
+
+/* bouton retour CENTRÉ (page création) */
+.btn-centre {
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
+/* =========================
+   COULEURS DES BANDEAUX
+   (rétro années 1950)
+========================= */
+
+.page-accueil header {
+  background: #4fb9b2; /* bleu turquoise */
+  color: white;
+}
+
+.page-bricolage header {
+  background: #c9a36a; /* brun crème */
+}
+
+.page-maison header {
+  background: #9ec9a3; /* vert clair */
+}
+
+.page-electricite header {
+  background: #c45a4a; /* rouge rétro */
+}
+
+.page-creation header {
+  background: #b6a4d8; /* violet clair */
+}
+
+.page-objets-anciens header {
+  background: #7fb3d5; /* bleu clair */
+}
+
+/* =========================
+   MENU PRINCIPAL (ACCUEIL)
+========================= */
+
+.menu-principal {
+  margin-top: 15px;
+}
+
+.menu-principal a {
+  margin: 0 10px;
+  text-decoration: none;
+  font-weight: bold;
+  color: white;
+}
+
+/* =========================
+   CONTENU PRINCIPAL
+========================= */
 
 main {
   max-width: 900px;
   margin: auto;
-  background: #fff;
+  background: white;
   padding: 30px;
-  box-sizing: border-box;
 }
 
-h1, h2 {
-  margin-top: 0;
-  color: #2b1d0f;
+/* séparation grise claire */
+.separation {
+  border: none;
+  border-top: 1px solid #ddd;
+  margin: 25px 0;
 }
 
-label {
-  display: block;
-  margin: 6px 0;
-  font-weight: bold;
-}
+/* =========================
+   BOUTONS
+========================= */
 
-textarea, input[type="text"], input[type="email"], input[type="url"], select {
-  width: 100%;
-  padding: 10px;
-  margin: 8px 0 16px 0;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-sizing: border-box;
-  font-size: 14px;
-  line-height: 1.4;
-}
-
-.themes label {
+.btn {
   display: inline-block;
-  margin-right: 12px;
-  font-size: 14px;
-}
-
-/* Bouton principal (Proposer / Envoyer) */
-button, .btn {
-  display: inline-block;
-  margin: 20px 0 0 0;
-  padding: 12px 20px;
   background: #2b1d0f;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  font-size: 16px;
-  font-weight: bold;
-  text-align: center;
-  cursor: pointer;
-}
-
-/* Séparations */
-hr {
-  border: none;
-  border-top: 1px solid #ccc;
-  margin: 20px 0;
-}
-
-footer {
-  background: #ddd;
-  text-align: center;
-  padding: 15px;
-  font-size: 14px;
-}
-
-/* ==========================
-   Couleurs des bandeaux par page
-========================== */
-.page-bricolage header { background: #c9a36a; }       /* brun crème */
-.page-creation header { background: #b6a4d8; }        /* violet clair */
-.page-electricite header { background: #e74c3c; }     /* rouge rétro */
-.page-maison header { background: #2ecc71; }          /* vert clair */
-.page-objets-anciens header { background: #5dade2; }  /* bleu clair */
-
-/* ==========================
-   Ajustements spécifiques pour formulaires
-========================== */
-form h2 {
-  margin-bottom: 8px;
-}
-
-.themes input[type="checkbox"] {
-  margin-right: 6px;
-}
-
-textarea {
-  min-height: 120px;
-  resize: vertical;
-}
-
-input, textarea, select {
-  font-size: 14px;
-  line-height: 1.4;
-}
+  c
