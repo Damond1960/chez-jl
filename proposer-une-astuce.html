@@ -2,54 +2,82 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
-  <title>Proposer une astuce | chez-JL</title>
+  <title>Proposer une création – chez-JL</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <style>
-    body { font-family: Arial; margin:0; background:#f4f4f4; }
-    header { background:#27ae60; color:white; padding:20px; text-align:center; }
-    main { max-width:700px; margin:auto; background:white; padding:30px; }
-    input, textarea, select { width:100%; margin:10px 0; padding:10px; }
-    button { background:#27ae60; color:white; border:none; padding:12px; }
+    body { margin:0; font-family: Arial, sans-serif; background:#f5efe6; }
+    header { background:#b6a4d8; color:#2b1d0f; padding:20px; text-align:center; }
+    .btn-retour {
+      display:inline-block; margin-bottom:10px; text-decoration:none;
+      background:rgba(255,255,255,0.5); padding:6px 12px; border-radius:4px;
+      color:#2b1d0f; font-weight:bold; appearance:none; border:none;
+    }
+    main { max-width:900px; margin:auto; background:#fff; padding:30px; }
+    h2 { color:#2b1d0f; }
+    label { display:block; margin:6px 0; }
+    textarea, input[type="text"], input[type="email"], input[type="url"] {
+      width:100%; padding:10px; margin:8px 0 16px 0;
+      border:1px solid #ccc; border-radius:4px;
+    }
+    .themes label { display:inline-block; margin-right:12px; }
+    button {
+      background:#2b1d0f; color:white; padding:12px 20px;
+      border:none; border-radius:5px; font-size:16px; cursor:pointer;
+    }
+    footer { background:#ddd; text-align:center; padding:15px; }
   </style>
 </head>
+
 <body>
 
 <header>
-  <h1>Proposer une astuce</h1>
-  <p>Partagez votre savoir-faire</p>
+  <a href="creation.html" class="btn-retour">⬅ Retour</a>
+  <h1>chez-JL</h1>
+  <p>Proposer une création</p>
 </header>
 
 <main>
 
-<form>
-  <label>Votre nom ou pseudo</label>
-  <input type="text">
+  <!-- 🔴 REMPLACE L’URL CI-DESSOUS PAR CELLE DE TON FORMULAIRE FORMSPREE -->
+  <form action="https://formspree.io/f/TON_ID_FORM" method="POST">
 
-  <label>Email (non public)</label>
-  <input type="email">
+    <h2>Description de la création</h2>
+    <textarea name="description" rows="5" required
+      placeholder="Explique ta création en au moins 3 lignes (quoi, comment, pourquoi)"></textarea>
 
-  <label>Catégorie</label>
-  <select>
-    <option>Bricolage</option>
-    <option>Maison</option>
-    <option>Électricité</option>
-    <option>Mécanique</option>
-    <option>Création</option>
-  </select>
+    <h2>Thèmes</h2>
+    <div class="themes">
+      <label><input type="checkbox" name="themes" value="Couture"> Couture</label>
+      <label><input type="checkbox" name="themes" value="Broderie"> Broderie</label>
+      <label><input type="checkbox" name="themes" value="Dessin"> Dessin</label>
+      <label><input type="checkbox" name="themes" value="Peinture"> Peinture</label>
+      <label><input type="checkbox" name="themes" value="DIY / Artisanat"> DIY / Artisanat</label>
+      <label><input type="checkbox" name="themes" value="Autre"> Autre</label>
+    </div>
 
-  <label>Votre astuce</label>
-  <textarea rows="6"></textarea>
+    <h2>Vidéo (facultatif)</h2>
+    <input type="url" name="video" placeholder="Lien YouTube ou Vimeo">
 
-  <button type="submit">Envoyer</button>
-</form>
+    <h2>Images / Dessin (liens)</h2>
+    <input type="url" name="image1" placeholder="Lien image 1 (JPG, PNG, WEBP)">
+    <input type="url" name="image2" placeholder="Lien image 2 (optionnel)">
 
-<p>
-  Toute contribution est relue avant publication.
-  Un don est bienvenu mais jamais obligatoire.
-</p>
+    <h2>Contact (facultatif)</h2>
+    <input type="text" name="nom" placeholder="Nom ou pseudo">
+    <input type="email" name="email" placeholder="Email">
 
-<a href="index.html">⬅ Retour accueil</a>
+    <!-- Redirection après envoi (optionnelle si tu as merci.html) -->
+    <input type="hidden" name="_redirect" value="https://chez-jl.com/merci.html">
+
+    <button type="submit">Envoyer ma création</button>
+  </form>
 
 </main>
-<footer> © chez-JL – Tous droits réservés</footer></body>
+
+<footer>
+  © chez-JL
+</footer>
+
+</body>
 </html>
