@@ -31,51 +31,51 @@ header {
   position: relative;
 }
 
-/* bouton retour / accueil */
+/* Bouton retour / accueil */
 .btn-retour {
   display: inline-block;
-  background: rgba(255,255,255,0.5);
-  padding: 6px 12px;
-  border-radius: 4px;
+  background: rgba(255,255,255,0.6);
+  padding: 8px 14px;
+  border-radius: 5px;
   font-weight: bold;
   text-decoration: none;
-  margin-bottom: 10px;
+  margin-bottom: 12px;
+  color: #2b1d0f;
 }
 
-/* bouton retour CENTRÉ (page création) */
+/* Bouton accueil centré (pages Bricolage & Création) */
 .btn-centre {
   display: inline-block;
-  margin-bottom: 10px;
+  margin-bottom: 12px;
 }
 
 /* =========================
    COULEURS DES BANDEAUX
-   (rétro années 1950)
 ========================= */
 
 .page-accueil header {
-  background: #4fb9b2; /* bleu turquoise */
+  background: #4fb9b2;
   color: white;
 }
 
 .page-bricolage header {
-  background: #c9a36a; /* brun crème */
+  background: #c9a36a;
 }
 
 .page-maison header {
-  background: #9ec9a3; /* vert clair */
+  background: #9ec9a3;
 }
 
 .page-electricite header {
-  background: #c45a4a; /* rouge rétro */
+  background: #c45a4a;
 }
 
 .page-creation header {
-  background: #b6a4d8; /* violet clair */
+  background: #b6a4d8;
 }
 
 .page-objets-anciens header {
-  background: #7fb3d5; /* bleu clair */
+  background: #7fb3d5;
 }
 
 /* =========================
@@ -104,7 +104,7 @@ main {
   padding: 30px;
 }
 
-/* séparation grise claire */
+/* Ligne de séparation */
 .separation {
   border: none;
   border-top: 1px solid #ddd;
@@ -112,24 +112,37 @@ main {
 }
 
 /* =========================
-   BOUTONS
+   BOUTONS NOIRS (COMMUNS)
 ========================= */
 
 .btn {
   display: inline-block;
   background: #2b1d0f;
-  c
-/* ===== CORRECTIONS FINALES ===== */
+  color: #ffffff;
+  padding: 12px 20px;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: bold;
+  text-decoration: none;
+  cursor: pointer;
+}
 
-/* Boutons noirs : texte BLANC lisible partout */
+/* Forcer lisibilité et suppression soulignement */
 a.btn,
 a.btn:visited,
-a.btn:hover {
+a.btn:hover,
+a.btn:active {
   color: #ffffff !important;
   text-decoration: none !important;
 }
 
-/* Footer centré définitivement */
+/* =========================
+   FOOTER
+========================= */
+
 footer {
-  text-align: center !important;
+  background: #ddd;
+  text-align: center;
+  padding: 15px;
+  font-size: 14px;
 }
