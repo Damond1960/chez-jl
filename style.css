@@ -1,112 +1,123 @@
-/* ===== Style général chez-JL ===== */
-
+/* ==========================
+   Styles généraux pour toutes les pages
+========================== */
 body {
   margin: 0;
   font-family: Arial, sans-serif;
+  background: #f5efe6; /* fond principal */
+  color: #2b1d0f;
 }
 
-/* ===== HEADER COMMUN ===== */
-.header-bar {
-  background-color: #c8a165; /* couleur par défaut, à changer par page */
+header {
   padding: 20px;
-  color: white;
   text-align: center;
+  position: relative;
+  color: #2b1d0f;
 }
 
-.header-content {
-  display: flex;
-  flex-direction: column; /* bouton, titre, slogan verticalement */
-  align-items: center;    /* centre horizontalement tout */
-  gap: 10px;
-}
 .btn-retour {
-  font-size: 14px;
-  padding: 6px 10px;
-
-  background: rgba(255,255,255,0.25);
-  color: white;
-  padding: 8px 12px;
+  display: inline-block;
+  margin-bottom: 10px;
   text-decoration: none;
+  background: rgba(255, 255, 255, 0.5);
+  padding: 6px 12px;
   border-radius: 4px;
+  color: #2b1d0f;
   font-weight: bold;
-  font-size: 16px;
+  border: none;
 }
 
-.page-bricolage .header-bar { background-color: #c8a165; }
-.page-electricite .header-bar { background-color: #c0392b; }
-.page-maison .header-bar { background-color: #ecf0f1; color: #333; }
-.page-creation .header-bar { background-color: #9b59b6; }
-.page-objets-anciens .header-bar { background-color: #f39c12; }
-
-/* ===== CONTENU ===== */
 main {
   max-width: 900px;
   margin: auto;
-  background: white;
+  background: #fff;
   padding: 30px;
+  box-sizing: border-box;
 }
 
-/* ===== FOOTER ===== */
+h1, h2 {
+  margin-top: 0;
+  color: #2b1d0f;
+}
+
+label {
+  display: block;
+  margin: 6px 0;
+  font-weight: bold;
+}
+
+textarea, input[type="text"], input[type="email"], input[type="url"], select {
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0 16px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.themes label {
+  display: inline-block;
+  margin-right: 12px;
+  font-size: 14px;
+}
+
+/* Bouton principal (Proposer / Envoyer) */
+button, .btn {
+  display: inline-block;
+  margin: 20px 0 0 0;
+  padding: 12px 20px;
+  background: #2b1d0f;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  cursor: pointer;
+}
+
+/* Séparations */
+hr {
+  border: none;
+  border-top: 1px solid #ccc;
+  margin: 20px 0;
+}
+
 footer {
   background: #ddd;
   text-align: center;
   padding: 15px;
   font-size: 14px;
 }
-/* ===== COULEURS RÉTRO ANNÉES 1950 ===== */
 
-.page-bricolage .header-bar {
-  background-color: #c6a87d; /* brun crème */
+/* ==========================
+   Couleurs des bandeaux par page
+========================== */
+.page-bricolage header { background: #c9a36a; }       /* brun crème */
+.page-creation header { background: #b6a4d8; }        /* violet clair */
+.page-electricite header { background: #e74c3c; }     /* rouge rétro */
+.page-maison header { background: #2ecc71; }          /* vert clair */
+.page-objets-anciens header { background: #5dade2; }  /* bleu clair */
+
+/* ==========================
+   Ajustements spécifiques pour formulaires
+========================== */
+form h2 {
+  margin-bottom: 8px;
 }
 
-.page-electricite .header-bar {
-  background-color: #b24a3b; /* rouge rétro */
+.themes input[type="checkbox"] {
+  margin-right: 6px;
 }
 
-.page-creation .header-bar {
-  background-color: #a78bc3; /* violet clair */
+textarea {
+  min-height: 120px;
+  resize: vertical;
 }
 
-.page-objets-anciens .header-bar {
-  background-color: #7fa6b8; /* bleu clair rétro */
-}
-
-.page-maison .header-bar {
-  background-color: #8fb59a; /* vert clair */
-}
-/* ===== COULEURS PAR PAGE ===== */
-.page-accueil .header-bar { background: #1abc9c; }
-.page-bricolage .header-bar { background: #c8a165; }
-.page-electricite .header-bar { background: #c0392b; }
-.page-maison .header-bar { background: #ecf0f1; color:#333; }
-
-/* ===== MENU ACCUEIL ===== */
-
-.header-accueil {
-  flex-direction: column;
-  text-align: center;
-}
-
-.menu-principal {
-  margin-top: 15px;
-}
-
-.menu-principal a {
-  margin: 0 12px;
-  color: white;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-.menu-principal a:hover {
-  text-decoration: underline;
-}
-/* ===== BOUTON RETOUR : SUPPRESSION APPARENCE NAVIGATEUR ===== */
-
-.btn-retour {
-  appearance: none;
-  -webkit-appearance: none;
-  box-shadow: none;
-  border: none;
-  outline: none;
+input, textarea, select {
+  font-size: 14px;
+  line-height: 1.4;
 }
