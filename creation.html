@@ -9,7 +9,7 @@
     body {
       margin: 0;
       font-family: Arial, sans-serif;
-      background: white; /* plus de gris */
+      background: white;
     }
 
     header {
@@ -39,15 +39,17 @@
     }
 
     .btn {
-      display: inline-block;
-      margin: 20px 0;
-      padding: 10px 16px;
+      display: block;              /* permet le centrage */
+      width: fit-content;
+      margin: 30px auto 0 auto;    /* sous le texte + centré */
+      padding: 10px 18px;
       background: #2c3e50;
       color: white;
       text-decoration: none;
       border-radius: 4px;
       font-size: 15px;
       font-weight: bold;
+      text-align: center;          /* centrage horizontal */
     }
 
     footer {
@@ -70,10 +72,6 @@
 
 <main>
 
-<a href="proposer-creation.html" class="btn">
-  ➕ Proposer une création
-</a>
-
 <h2>Création & Loisirs créatifs</h2>
 
 <p>
@@ -86,6 +84,10 @@
   Partagez vos idées, vos réalisations et vos techniques
   pour inspirer la communauté chez-JL.
 </p>
+
+<a href="proposer-creation.html" class="btn">
+  ➕ Proposer une création
+</a>
 
 </main>
 
