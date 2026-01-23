@@ -5,81 +5,80 @@
   <title>Proposer une astuce bricolage – chez-JL</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- CSS commun validé -->
-  <link rel="stylesheet" href="style.css">
+  <style>
+    body { margin:0; font-family: Arial, sans-serif; background:#f5efe6; }
+    header { background:#c9a36a; color:#2b1d0f; padding:20px; text-align:center; }
+    .btn-retour {
+      display:inline-block; margin-bottom:10px; text-decoration:none;
+      background:rgba(255,255,255,0.5); padding:6px 12px; border-radius:4px;
+      color:#2b1d0f; font-weight:bold; appearance:none; border:none;
+    }
+    main { max-width:900px; margin:auto; background:#fff; padding:30px; }
+    h2 { color:#2b1d0f; }
+    label { display:block; margin:6px 0; }
+    textarea, input[type="text"], input[type="email"], input[type="url"] {
+      width:100%; padding:10px; margin:8px 0 16px 0;
+      border:1px solid #ccc; border-radius:4px;
+    }
+    .themes label { display:inline-block; margin-right:12px; }
+    button {
+      background:#2b1d0f; color:white; padding:12px 20px;
+      border:none; border-radius:5px; font-size:16px; cursor:pointer;
+    }
+    footer { background:#ddd; text-align:center; padding:15px; }
+  </style>
 </head>
 
-<body class="page-bricolage">
+<body>
 
 <header>
-  <!-- bouton accueil centré au-dessus -->
-  <a href="index.html" class="btn-retour btn-centre">⬅ Accueil</a>
-
+  <a href="bricolage.html" class="btn-retour">⬅ Retour</a>
   <h1>chez-JL</h1>
   <p>Proposer une astuce bricolage</p>
 </header>
 
 <main>
 
-  <!-- FORMULAIRE FORMSPREE -->
   <form action="https://formspree.io/f/xpqqdkbz" method="POST">
 
-    <!-- identification claire de la page -->
+    <!-- identification de la page -->
     <input type="hidden" name="origine" value="Bricolage">
 
-    <!-- redirection après envoi -->
-    <input type="hidden" name="_redirect" value="merci.html">
-
     <h2>Description de l’astuce</h2>
-    <textarea
-      name="description"
-      rows="5"
-      required
+    <textarea name="description" rows="5" required
       placeholder="Explique ton astuce en au moins 3 lignes (quoi, comment, pourquoi)">
     </textarea>
 
     <h2>Thèmes</h2>
     <div class="themes">
-      <label>
-        <input type="checkbox" name="themes" value="Réparation">
-        Réparation
-      </label>
-      <label>
-        <input type="checkbox" name="themes" value="Économie">
-        Économie
-      </label>
-      <label>
-        <input type="checkbox" name="themes" value="Récupération">
-        Récupération
-      </label>
-      <label>
-        <input type="checkbox" name="themes" value="Sécurité">
-        Sécurité
-      </label>
-      <label>
-        <input type="checkbox" name="themes" value="Astuce rapide">
-        Astuce rapide
-      </label>
+      <label><input type="checkbox" name="themes" value="Réparation"> Réparation</label>
+      <label><input type="checkbox" name="themes" value="Économie"> Économie</label>
+      <label><input type="checkbox" name="themes" value="Récupération"> Récupération</label>
+      <label><input type="checkbox" name="themes" value="Sécurité"> Sécurité</label>
+      <label><input type="checkbox" name="themes" value="Astuce rapide"> Astuce rapide</label>
     </div>
 
     <h2>Vidéo (facultatif)</h2>
-    <input
-      type="url"
-      name="video"
-      placeholder="Lien YouTube ou Vimeo">
+    <input type="url" name="video" placeholder="Lien YouTube ou Vimeo">
 
     <h2>Images / Dessin (liens)</h2>
-    <input
-      type="url"
-      name="image1"
-      placeholder="Lien image 1 (JPG, PNG, WEBP)">
-    <input
-      type="url"
-      name="image2"
-      placeholder="Lien image 2 (optionnel)">
+    <input type="url" name="image1" placeholder="Lien image 1 (JPG, PNG, WEBP)">
+    <input type="url" name="image2" placeholder="Lien image 2 (optionnel)">
 
     <h2>Contact (facultatif)</h2>
-    <input
-      type="text"
-      name="nom"
-      placehold
+    <input type="text" name="nom" placeholder="Nom ou pseudo">
+    <input type="email" name="email" placeholder="Email">
+
+    <input type="hidden" name="_redirect" value="https://chez-jl.com/merci.html">
+
+    <button type="submit">Envoyer mon astuce</button>
+  </form>
+
+</main>
+
+<footer>
+  © chez-JL
+</footer>
+
+</body>
+</html>
