@@ -39,44 +39,39 @@
 
 <main>
 
-<form action="https://formspree.io/f/xpqqdkbz" method="POST">
+  <form action="https://formspree.io/f/xpqqdkbz" method="POST">
 
-  <!-- On indique la page d'origine -->
-  <input type="hidden" name="origine" value="Bricolage">
+    <!-- identification de la page -->
+    <input type="hidden" name="origine" value="Bricolage">
 
-  <!-- Redirection après envoi -->
-  <input type="hidden" name="_redirect" value="https://chez-jl.com/merci.html">
+ <h2>Description de l’astuce</h2>
+<textarea name="description" rows="5" placeholder="Explique ton astuce bricolage en 3 lignes (quoi, comment, pourquoi)" required></textarea>
 
-  <!-- Description obligatoire avec texte grisé -->
-  <h2>Description de l’astuce</h2>
-  <textarea name="description" rows="5" required
-    placeholder="Explique ton astuce bricolage en 3 lignes (quoi, comment, pourquoi)"></textarea>
+    <div class="themes">
+  <label><input type="checkbox" name="themes" value="Réparation" required> Réparation</label>
+  <label><input type="checkbox" name="themes" value="Économie"> Économie</label>
+  <label><input type="checkbox" name="themes" value="Récupération"> Récupération</label>
+  <label><input type="checkbox" name="themes" value="Sécurité"> Sécurité</label>
+  <label><input type="checkbox" name="themes" value="Astuce rapide"> Astuce rapide</label>
+</div>
 
-  <!-- Thèmes, au moins un à cocher -->
-  <h2>Thèmes</h2>
-  <div class="themes">
-    <label><input type="checkbox" name="themes" value="Réparation" required> Réparation</label>
-    <label><input type="checkbox" name="themes" value="Économie"> Économie</label>
-    <label><input type="checkbox" name="themes" value="Récupération"> Récupération</label>
-    <label><input type="checkbox" name="themes" value="Sécurité"> Sécurité</label>
-    <label><input type="checkbox" name="themes" value="Astuce rapide"> Astuce rapide</label>
-  </div>
 
-  <!-- Champs facultatifs -->
-  <h2>Vidéo (facultatif)</h2>
-  <input type="url" name="video" placeholder="Lien YouTube ou Vimeo">
+    <h2>Vidéo (facultatif)</h2>
+    <input type="url" name="video" placeholder="Lien YouTube ou Vimeo">
 
-  <h2>Images / Dessin (liens)</h2>
-  <input type="url" name="image1" placeholder="Lien image 1 (JPG, PNG, WEBP)">
-  <input type="url" name="image2" placeholder="Lien image 2 (optionnel)">
+    <h2>Images / Dessin (liens)</h2>
+    <input type="url" name="image1" placeholder="Lien image 1 (JPG, PNG, WEBP)">
+    <input type="url" name="image2" placeholder="Lien image 2 (optionnel)">
 
-  <h2>Contact (facultatif)</h2>
-  <input type="text" name="nom" placeholder="Nom ou pseudo">
-  <input type="email" name="email" placeholder="Email">
+    <h2>Contact (facultatif)</h2>
+    <input type="text" name="nom" placeholder="Nom ou pseudo">
+    <input type="email" name="email" placeholder="Email">
 
-  <button type="submit">Envoyer mon astuce</button>
-</form>
+    <!-- Champ caché pour la redirection après envoi -->
+<input type="hidden" name="_redirect" value="https://chez-jl.com/merci.html">
 
+    <button type="submit">Envoyer mon astuce</button>
+  </form>
 
 </main>
 
@@ -86,4 +81,3 @@
 
 </body>
 </html>
-
