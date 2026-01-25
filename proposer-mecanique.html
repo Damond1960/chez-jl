@@ -6,28 +6,48 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <style>
-    body { margin:0; font-family: Arial, sans-serif; background:#f5efe6; }
-    header { background:#9ec9a3; color:#2b1d0f; padding:20px; text-align:center; }
+    body {
+      margin:0;
+      font-family: Arial, sans-serif;
+      background:#f5efe6;
+    }
+    header {
+      background:#3f4246;
+      color:#f5efe6;
+      padding:20px;
+      text-align:center;
+    }
     .btn-retour {
       display:inline-block;
       margin-bottom:10px;
       text-decoration:none;
-      background:rgba(255,255,255,0.5);
+      background:rgba(255,255,255,0.15);
       padding:6px 12px;
       border-radius:4px;
       font-weight:bold;
-      color:#2b1d0f;
+      color:#f5efe6;
     }
-    main { max-width:900px; margin:auto; background:#fff; padding:30px; }
+    main {
+      max-width:900px;
+      margin:auto;
+      background:#fff;
+      padding:30px;
+    }
     h2 { color:#2b1d0f; }
-    textarea, input[type="text"], input[type="email"], input[type="url"] {
+    textarea,
+    input[type="text"],
+    input[type="email"],
+    input[type="url"] {
       width:100%;
       padding:10px;
       margin:8px 0 16px 0;
       border:1px solid #ccc;
       border-radius:4px;
     }
-    .themes label { display:inline-block; margin-right:12px; }
+    .themes label {
+      display:inline-block;
+      margin-right:12px;
+    }
     button {
       background:#2b1d0f;
       color:white;
@@ -37,7 +57,11 @@
       font-size:16px;
       cursor:pointer;
     }
-    footer { background:#ddd; text-align:center; padding:15px; }
+    footer {
+      background:#ddd;
+      text-align:center;
+      padding:15px;
+    }
   </style>
 </head>
 
@@ -53,7 +77,6 @@
 
 <form action="https://formspree.io/f/TON_ID_FORM" method="POST">
 
-  <!-- Origine -->
   <input type="hidden" name="origine" value="Mécanique">
 
   <h2>Description de l’astuce</h2>
@@ -82,7 +105,6 @@
   <input type="text" name="nom" placeholder="Nom ou pseudo">
   <input type="email" name="email" placeholder="Email">
 
-  <!-- Redirection -->
   <input type="hidden" name="_redirect" value="https://chez-jl.com/merci.html">
 
   <button type="submit">Envoyer mon astuce</button>
