@@ -2,86 +2,51 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
-  <title>Proposer une astuce Couture & Broderie – chez-JL</title>
+  <title>Couture & Broderie – chez-JL</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <style>
-    body { margin:0; font-family: Arial, sans-serif; background:#f5efe6; }
-    header { background:#b6a4d8; color:#2b1d0f; padding:20px; text-align:center; }
-    .btn-retour {
-      display:inline-block; margin-bottom:10px; text-decoration:none;
-      background:rgba(255,255,255,0.5); padding:6px 12px; border-radius:4px;
-      color:#2b1d0f; font-weight:bold; border:none; cursor:pointer;
-    }
-    main { max-width:900px; margin:auto; background:#fff; padding:30px; }
-    h2 { color:#2b1d0f; }
-    label { display:block; margin:6px 0; }
-    textarea, input[type="text"], input[type="email"], input[type="url"] {
-      width:100%; padding:10px; margin:8px 0 16px 0; border:1px solid #ccc; border-radius:4px;
-    }
-    .themes label { display:inline-block; margin-right:12px; }
-    button {
-      background:#2b1d0f; color:white; padding:12px 20px;
-      border:none; border-radius:5px; font-size:16px; cursor:pointer;
-    }
-    footer { background:#ddd; text-align:center; padding:15px; }
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
+<body class="page-creation">
 
-<header>
-  <a href="couture.html" class="btn-retour">⬅ Retour</a>
+<header class="header-bar header-creation"
+        style="background:#b6a4d8; color:#2b1d0f; padding:20px; text-align:center;">
+  
+  <a href="index.html"
+     class="btn-retour btn-centre"
+     style="background:rgba(255,255,255,0.5); color:#2b1d0f;">
+     ⬅ Accueil
+  </a>
+
   <h1>chez-JL</h1>
-  <p>Proposer une astuce Couture & Broderie</p>
+  <p>Couture & Broderie</p>
 </header>
 
 <main>
 
-  <form action="https://formspree.io/f/xpqqdkbz" method="POST">
-    
-    <!-- Origine pour identifier la page -->
-    <input type="hidden" name="origine" value="Couture & Broderie">
-    
-    <!-- Description obligatoire -->
-    <h2>Description de l’astuce</h2>
-    <textarea name="description" rows="5" required
-      placeholder="Explique ton astuce couture ou broderie en au moins 3 lignes (quoi, comment, pourquoi)"></textarea>
+  <section>
+    <h2>Créations et loisirs créatifs</h2>
+    <p>
+      Couture, broderie, tricot, patchwork et autres projets DIY
+      partagés par notre communauté.
+    </p>
+  </section>
 
-    <!-- Thèmes -->
-    <h2>Thèmes</h2>
-    <div class="themes">
-      <label><input type="checkbox" name="themes" value="Couture"> Couture</label>
-      <label><input type="checkbox" name="themes" value="Broderie"> Broderie</label>
-      <label><input type="checkbox" name="themes" value="Tricot"> Tricot</label>
-      <label><input type="checkbox" name="themes" value="Patchwork"> Patchwork</label>
-      <label><input type="checkbox" name="themes" value="Autre"> Autre</label>
-    </div>
+  <hr class="separation">
 
-    <!-- Vidéo facultative -->
-    <h2>Vidéo (facultatif)</h2>
-    <input type="url" name="video" placeholder="Lien YouTube ou Vimeo">
-
-    <!-- Images facultatives -->
-    <h2>Images / Dessin (liens)</h2>
-    <input type="url" name="image1" placeholder="Lien image 1 (JPG, PNG, WEBP)">
-    <input type="url" name="image2" placeholder="Lien image 2 (optionnel)">
-
-    <!-- Contact facultatif -->
-    <h2>Contact (facultatif)</h2>
-    <input type="text" name="nom" placeholder="Nom ou pseudo">
-    <input type="email" name="email" placeholder="Email">
-
-    <!-- Redirection vers page Merci -->
-    <input type="hidden" name="_redirect" value="https://chez-jl.com/merci.html">
-
-    <button type="submit">Envoyer mon astuce</button>
-  </form>
+  <section style="text-align:center;">
+    <a href="proposer-couture.html" class="btn">
+      ➕ Proposer une astuce Couture & Broderie
+    </a>
+  </section>
 
 </main>
 
 <footer>
-  © chez-JL
+  © chez-JL – Tous droits réservés
 </footer>
+
+</body>
+</html>
 
 
