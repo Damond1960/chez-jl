@@ -6,69 +6,32 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <style>
-    body {
-      margin:0;
-      font-family: Arial, sans-serif;
-      background:#f5efe6;
-    }
-    header {
-      background:#b6a4d8;
-      color:#2b1d0f;
-      padding:20px;
-      text-align:center;
-    }
+    body { margin:0; font-family: Arial, sans-serif; background:#f5efe6; }
+    header { background:#b6d0f2; color:#2b1d0f; padding:20px; text-align:center; }
     .btn-retour {
-      display:inline-block;
-      margin-bottom:10px;
-      text-decoration:none;
-      background:rgba(255,255,255,0.5);
-      padding:6px 12px;
-      border-radius:4px;
-      color:#2b1d0f;
-      font-weight:bold;
+      display:inline-block; margin-bottom:10px; text-decoration:none;
+      background:rgba(255,255,255,0.5); padding:6px 12px; border-radius:4px;
+      color:#2b1d0f; font-weight:bold; border:none; cursor:pointer;
     }
-    main {
-      max-width:900px;
-      margin:auto;
-      background:#fff;
-      padding:30px;
-    }
+    main { max-width:900px; margin:auto; background:#fff; padding:30px; }
     h2 { color:#2b1d0f; }
-    textarea,
-    input[type="text"],
-    input[type="email"],
-    input[type="url"] {
-      width:100%;
-      padding:10px;
-      margin:8px 0 16px 0;
-      border:1px solid #ccc;
-      border-radius:4px;
+    label { display:block; margin:6px 0; }
+    textarea, input[type="text"], input[type="email"], input[type="url"] {
+      width:100%; padding:10px; margin:8px 0 16px 0; border:1px solid #ccc; border-radius:4px;
     }
-    .themes label {
-      display:inline-block;
-      margin-right:12px;
-    }
+    .themes label { display:inline-block; margin-right:12px; }
     button {
-      background:#2b1d0f;
-      color:white;
-      padding:12px 20px;
-      border:none;
-      border-radius:5px;
-      font-size:16px;
-      cursor:pointer;
+      background:#2b1d0f; color:white; padding:12px 20px;
+      border:none; border-radius:5px; font-size:16px; cursor:pointer;
     }
-    footer {
-      background:#ddd;
-      text-align:center;
-      padding:15px;
-    }
+    footer { background:#ddd; text-align:center; padding:15px; }
   </style>
 </head>
 
 <body>
 
 <header>
-  <a href="couture.html" class="btn-retour">⬅ Retour</a>
+  <a href="couture-broderie.html" class="btn-retour">⬅ Retour</a>
   <h1>chez-JL</h1>
   <p>Proposer une astuce Couture & Broderie</p>
 </header>
@@ -96,7 +59,7 @@
   <input type="url" name="video" placeholder="Lien YouTube ou Vimeo">
 
   <h2>Images / Dessin (liens)</h2>
-  <input type="url" name="image1" placeholder="Lien image 1">
+  <input type="url" name="image1" placeholder="Lien image 1 (JPG, PNG, WEBP)">
   <input type="url" name="image2" placeholder="Lien image 2 (optionnel)">
 
   <h2>Contact (facultatif)</h2>
@@ -106,19 +69,15 @@
   <input type="hidden" name="_redirect" value="https://chez-jl.com/merci.html">
 
   <button type="submit">Envoyer mon astuce</button>
-
 </form>
 
 </main>
 
 <footer>
-  © chez-JL – Tous droits réservés
+  © chez-JL
 </footer>
 
 </body>
 </html>
 
-
-</body>
-</html>
 
