@@ -2,70 +2,76 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
-  <title>Proposer une astuce mécanique – chez-JL</title>
+  <title>Proposer une astuce jardinage – chez-JL</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
+
+  <style>
+    body { margin:0; font-family: Arial, sans-serif; background:#f5efe6; }
+    header { background:#9ec9a3; color:#2b1d0f; padding:20px; text-align:center; }
+    .btn-retour {
+      display:inline-block; margin-bottom:10px; text-decoration:none;
+      background:rgba(255,255,255,0.5); padding:6px 12px; border-radius:4px;
+      font-weight:bold; color:#2b1d0f;
+    }
+    main { max-width:900px; margin:auto; background:#fff; padding:30px; }
+    h2 { color:#2b1d0f; }
+    textarea, input[type="text"], input[type="email"], input[type="url"] {
+      width:100%; padding:10px; margin:8px 0 16px 0;
+      border:1px solid #ccc; border-radius:4px;
+    }
+    .themes label { display:inline-block; margin-right:12px; }
+    button {
+      background:#2b1d0f; color:white; padding:12px 20px;
+      border:none; border-radius:5px; font-size:16px; cursor:pointer;
+    }
+    footer { background:#ddd; text-align:center; padding:15px; }
+  </style>
 </head>
 
-<body class="page-mecanique">
+<body>
 
 <header>
-  <a href="mecanique.html" class="btn-retour">Accueil</a>
+  <a href="jardinage.html" class="btn-retour">⬅ Retour</a>
   <h1>chez-JL</h1>
-  <p>Proposer une astuce mécanique</p>
+  <p>Proposer une astuce jardinage</p>
 </header>
 
 <main>
 
-  <form action="https://formspree.io/f/xpqqdkbz" method="POST">
+<form action="https://formspree.io/f/TON_ID_FORM" method="POST">
 
-    <!-- IDENTIFICATION DE LA SOURCE -->
-    <input type="hidden" name="origine" value="Mécanique">
+  <input type="hidden" name="origine" value="Jardinage">
 
-    <!-- DESCRIPTION -->
-    <h2>Description de l’astuce</h2>
-    <textarea
-      name="description"
-      rows="5"
-      required
-      placeholder="Explique ton astuce mécanique en au moins 3 lignes (quoi, comment, pourquoi)">
-    </textarea>
+  <h2>Description de l’astuce</h2>
+  <textarea name="description" rows="5" required
+    placeholder="Explique ton astuce jardinage en au moins 3 lignes (quoi, comment, pourquoi)"></textarea>
 
-    <!-- THEMES -->
-    <h2>Thèmes</h2>
-    <div class="themes">
-      <label><input type="checkbox" name="themes" value="Entretien"> Entretien</label>
-      <label><input type="checkbox" name="themes" value="Réparation"> Réparation</label>
-      <label><input type="checkbox" name="themes" value="Diagnostic"> Diagnostic</label>
-      <label><input type="checkbox" name="themes" value="Économie"> Économie</label>
-      <label><input type="checkbox" name="themes" value="Sécurité"> Sécurité</label>
-      <label><input type="checkbox" name="themes" value="Outillage"> Outillage</label>
-      <label><input type="checkbox" name="themes" value="Vélo"> Vélo</label>
-      <label><input type="checkbox" name="themes" value="Moto"> Moto</label>
-      <label><input type="checkbox" name="themes" value="Automobile"> Automobile</label>
-      <label><input type="checkbox" name="themes" value="Autre"> Autre</label>
-    </div>
+  <h2>Thèmes</h2>
+  <div class="themes">
+    <label><input type="checkbox" name="themes" value="Potager"> Potager</label>
+    <label><input type="checkbox" name="themes" value="Plantes"> Plantes</label>
+    <label><input type="checkbox" name="themes" value="Entretien"> Entretien</label>
+    <label><input type="checkbox" name="themes" value="Écologique"> Écologique</label>
+    <label><input type="checkbox" name="themes" value="Récupération"> Récupération</label>
+    <label><input type="checkbox" name="themes" value="Autre"> Autre</label>
+  </div>
 
-    <!-- VIDEO -->
-    <h2>Vidéo (facultatif)</h2>
-    <input type="url" name="video" placeholder="Lien YouTube ou Vimeo">
+  <h2>Vidéo (facultatif)</h2>
+  <input type="url" name="video" placeholder="Lien YouTube ou Vimeo">
 
-    <!-- IMAGES -->
-    <h2>Images / schémas (liens)</h2>
-    <input type="url" name="image1" placeholder="Lien image 1 (JPG, PNG, WEBP)">
-    <input type="url" name="image2" placeholder="Lien image 2 (optionnel)">
+  <h2>Images (liens)</h2>
+  <input type="url" name="image1" placeholder="Lien image 1 (JPG, PNG, WEBP)">
+  <input type="url" name="image2" placeholder="Lien image 2 (optionnel)">
 
-    <!-- CONTACT -->
-    <h2>Contact (facultatif)</h2>
-    <input type="text" name="nom" placeholder="Nom ou pseudo">
-    <input type="email" name="email" placeholder="Email">
+  <h2>Contact (facultatif)</h2>
+  <input type="text" name="nom" placeholder="Nom ou pseudo">
+  <input type="email" name="email" placeholder="Email">
 
-    <!-- REDIRECTION -->
-    <input type="hidden" name="_redirect" value="https://chez-jl.com/merci.html">
+  <input type="hidden" name="_redirect" value="https://chez-jl.com/merci.html">
 
-    <button type="submit">Envoyer mon astuce mécanique</button>
+  <button type="submit">Envoyer mon astuce</button>
 
-  </form>
+</form>
 
 </main>
 
@@ -75,3 +81,4 @@
 
 </body>
 </html>
+
