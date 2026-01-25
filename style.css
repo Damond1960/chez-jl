@@ -146,3 +146,19 @@ footer {
   padding: 15px;
   font-size: 14px;
 }
+/* =========================
+   MENU ACCUEIL SUR 2 LIGNES
+========================= */
+
+.menu-deux-lignes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.menu-deux-lignes a {
+  width: 22%;
+  min-width: 180px;
+  text-align: center;
+  margin: 6px 10px;
+}
