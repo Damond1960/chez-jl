@@ -1,1 +1,77 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Proposer une astuce mécanique – chez-JL</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+</head>
 
+<body class="page-mecanique">
+
+<header>
+  <a href="mecanique.html" class="btn-retour">Accueil</a>
+  <h1>chez-JL</h1>
+  <p>Proposer une astuce mécanique</p>
+</header>
+
+<main>
+
+  <form action="https://formspree.io/f/xpqqdkbz" method="POST">
+
+    <!-- IDENTIFICATION DE LA SOURCE -->
+    <input type="hidden" name="origine" value="Mécanique">
+
+    <!-- DESCRIPTION -->
+    <h2>Description de l’astuce</h2>
+    <textarea
+      name="description"
+      rows="5"
+      required
+      placeholder="Explique ton astuce mécanique en au moins 3 lignes (quoi, comment, pourquoi)">
+    </textarea>
+
+    <!-- THEMES -->
+    <h2>Thèmes</h2>
+    <div class="themes">
+      <label><input type="checkbox" name="themes" value="Entretien"> Entretien</label>
+      <label><input type="checkbox" name="themes" value="Réparation"> Réparation</label>
+      <label><input type="checkbox" name="themes" value="Diagnostic"> Diagnostic</label>
+      <label><input type="checkbox" name="themes" value="Économie"> Économie</label>
+      <label><input type="checkbox" name="themes" value="Sécurité"> Sécurité</label>
+      <label><input type="checkbox" name="themes" value="Outillage"> Outillage</label>
+      <label><input type="checkbox" name="themes" value="Vélo"> Vélo</label>
+      <label><input type="checkbox" name="themes" value="Moto"> Moto</label>
+      <label><input type="checkbox" name="themes" value="Automobile"> Automobile</label>
+      <label><input type="checkbox" name="themes" value="Autre"> Autre</label>
+    </div>
+
+    <!-- VIDEO -->
+    <h2>Vidéo (facultatif)</h2>
+    <input type="url" name="video" placeholder="Lien YouTube ou Vimeo">
+
+    <!-- IMAGES -->
+    <h2>Images / schémas (liens)</h2>
+    <input type="url" name="image1" placeholder="Lien image 1 (JPG, PNG, WEBP)">
+    <input type="url" name="image2" placeholder="Lien image 2 (optionnel)">
+
+    <!-- CONTACT -->
+    <h2>Contact (facultatif)</h2>
+    <input type="text" name="nom" placeholder="Nom ou pseudo">
+    <input type="email" name="email" placeholder="Email">
+
+    <!-- REDIRECTION -->
+    <input type="hidden" name="_redirect" value="https://chez-jl.com/merci.html">
+
+    <button type="submit">Envoyer mon astuce mécanique</button>
+
+  </form>
+
+</main>
+
+<footer>
+  © chez-JL – Tous droits réservés
+</footer>
+
+</body>
+</html>
