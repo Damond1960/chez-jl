@@ -1,1 +1,77 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Proposer une astuce jardinage – chez-JL</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+</head>
 
+<body class="page-jardinage">
+
+<header>
+  <a href="jardinage.html" class="btn-retour">Accueil</a>
+  <h1>chez-JL</h1>
+  <p>Proposer une astuce jardinage & jardin</p>
+</header>
+
+<main>
+
+  <form action="https://formspree.io/f/xpqqdkbz" method="POST">
+
+    <!-- IDENTIFICATION DE LA SOURCE -->
+    <input type="hidden" name="origine" value="Jardinage">
+
+    <!-- DESCRIPTION -->
+    <h2>Description de l’astuce</h2>
+    <textarea
+      name="description"
+      rows="5"
+      required
+      placeholder="Explique ton astuce jardinage en au moins 3 lignes (quoi, comment, pourquoi)">
+    </textarea>
+
+    <!-- THEMES -->
+    <h2>Thèmes</h2>
+    <div class="themes">
+      <label><input type="checkbox" name="themes" value="Potager"> Potager</label>
+      <label><input type="checkbox" name="themes" value="Fleurs"> Fleurs</label>
+      <label><input type="checkbox" name="themes" value="Arbres & arbustes"> Arbres & arbustes</label>
+      <label><input type="checkbox" name="themes" value="Entretien"> Entretien</label>
+      <label><input type="checkbox" name="themes" value="Arrosage"> Arrosage</label>
+      <label><input type="checkbox" name="themes" value="Compost"> Compost</label>
+      <label><input type="checkbox" name="themes" value="Écologique"> Écologique</label>
+      <label><input type="checkbox" name="themes" value="Saisonnier"> Saisonnier</label>
+      <label><input type="checkbox" name="themes" value="Outils de jardin"> Outils de jardin</label>
+      <label><input type="checkbox" name="themes" value="Autre"> Autre</label>
+    </div>
+
+    <!-- VIDEO -->
+    <h2>Vidéo (facultatif)</h2>
+    <input type="url" name="video" placeholder="Lien YouTube ou Vimeo">
+
+    <!-- IMAGES -->
+    <h2>Images / photos (liens)</h2>
+    <input type="url" name="image1" placeholder="Lien image 1 (JPG, PNG, WEBP)">
+    <input type="url" name="image2" placeholder="Lien image 2 (optionnel)">
+
+    <!-- CONTACT -->
+    <h2>Contact (facultatif)</h2>
+    <input type="text" name="nom" placeholder="Nom ou pseudo">
+    <input type="email" name="email" placeholder="Email">
+
+    <!-- REDIRECTION -->
+    <input type="hidden" name="_redirect" value="https://chez-jl.com/merci.html">
+
+    <button type="submit">Envoyer mon astuce jardinage</button>
+
+  </form>
+
+</main>
+
+<footer>
+  © chez-JL – Tous droits réservés
+</footer>
+
+</body>
+</html>
