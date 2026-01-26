@@ -6,4 +6,4 @@ images/figurine-electricite.png
 images/figurine-maison.png
 images/figurine-jardinage.png
 images/figurine-couture.png
-images/figurine-objets anciens.png
+images/figurine-objets-anciens.png
