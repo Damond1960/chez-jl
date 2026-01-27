@@ -2,10 +2,14 @@
    BASE GÉNÉRALE
 ========================= */
 
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background: #f5efe6;
+  background: #f5efe6; /* beige général */
   color: #2b1d0f;
 }
 
@@ -19,16 +23,16 @@ p {
 
 a {
   color: inherit;
+  text-decoration: none;
 }
 
 /* =========================
-   HEADER / BANDEAU
+   HEADER / BANDEAU SUPÉRIEUR
 ========================= */
 
 header {
   padding: 20px;
   text-align: center;
-  position: relative;
 }
 
 /* Bouton retour / accueil */
@@ -38,14 +42,11 @@ header {
   padding: 8px 14px;
   border-radius: 5px;
   font-weight: bold;
-  text-decoration: none;
   margin-bottom: 12px;
-  color: #2b1d0f;
 }
 
-/* Bouton accueil centré (pages Bricolage & Création) */
+/* Bouton centré */
 .btn-centre {
-  display: inline-block;
   margin-bottom: 12px;
 }
 
@@ -68,6 +69,7 @@ header {
 
 .page-electricite header {
   background: #c45a4a;
+  color: white;
 }
 
 .page-creation header {
@@ -78,19 +80,53 @@ header {
   background: #7fb3d5;
 }
 
+.page-couture-broderie header {
+  background: #cfe4f6; /* bleu clair pastel */
+}
+
 /* =========================
-   MENU PRINCIPAL (ACCUEIL)
+   MENU PRINCIPAL ACCUEIL
 ========================= */
 
 .menu-principal {
   margin-top: 15px;
 }
 
-.menu-principal a {
-  margin: 0 10px;
-  text-decoration: none;
+.menu-deux-lignes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.menu-deux-lignes a {
+  width: 22%;
+  min-width: 180px;
+  margin: 6px 10px;
   font-weight: bold;
   color: white;
+}
+
+/* =========================
+   STRUCTURE MARGE + CONTENU
+========================= */
+
+.page-structure {
+  display: flex;
+  background: #f5efe6;
+}
+
+/* marge gauche beige */
+.marge-gauche {
+  width: 140px;
+  padding: 20px;
+  text-align: center;
+  background: #f5efe6;
+}
+
+/* figurines */
+.marge-gauche img {
+  max-width: 100%;
+  height: auto;
 }
 
 /* =========================
@@ -99,9 +135,9 @@ header {
 
 main {
   max-width: 900px;
-  margin: auto;
   background: white;
   padding: 30px;
+  margin: 0 auto;
 }
 
 /* Ligne de séparation */
@@ -112,7 +148,7 @@ main {
 }
 
 /* =========================
-   BOUTONS NOIRS (COMMUNS)
+   BOUTONS
 ========================= */
 
 .btn {
@@ -123,17 +159,15 @@ main {
   border-radius: 5px;
   font-size: 16px;
   font-weight: bold;
-  text-decoration: none;
   cursor: pointer;
 }
 
-/* Forcer lisibilité et suppression soulignement */
 a.btn,
-a.btn:visited,
 a.btn:hover,
+a.btn:visited,
 a.btn:active {
-  color: #ffffff !important;
-  text-decoration: none !important;
+  color: #ffffff;
+  text-decoration: none;
 }
 
 /* =========================
@@ -146,38 +180,27 @@ footer {
   padding: 15px;
   font-size: 14px;
 }
+
 /* =========================
-   MENU ACCUEIL SUR 2 LIGNES
+   RESPONSIVE SIMPLE
 ========================= */
 
-.menu-deux-lignes {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
+@media (max-width: 768px) {
 
-.menu-deux-lignes a {
-  width: 22%;
-  min-width: 180px;
-  text-align: center;
-  margin: 6px 10px;
-}
-/* Figurines pages */
-.page-avec-figurine {
-  position: relative;
-}
+  .page-structure {
+    flex-direction: column;
+  }
 
-.figurine-gauche {
-  position: absolute;
-  left: -120px; /* décale dans la marge beige */
-  top: 120px;
-  width: 110px;
-  max-width: 30vw;
-  pointer-events: none; /* évite clics involontaires */
-}
+  .marge-gauche {
+    width: 100%;
+    padding: 10px;
+  }
 
-@media (max-width: 900px) {
-  .figurine-gauche {
-    display: none; /* cache sur mobile */
+  main {
+    margin: 0;
+  }
+
+  .menu-deux-lignes a {
+    width: 45%;
   }
 }
