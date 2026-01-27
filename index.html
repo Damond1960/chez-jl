@@ -2,7 +2,7 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
-  <title>chez-JL – Accueil</title>
+  <title>chez-JL – Astuces & savoir-faire partagés</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
 </head>
@@ -11,36 +11,69 @@
 
 <header>
   <h1>chez-JL</h1>
-  <p>Partage d’astuces & savoir-faire</p>
+  <p>Astuces & savoir-faire partagés</p>
+
+  <!-- Menu principal sur 2 lignes -->
+  <nav class="menu-principal menu-deux-lignes">
+    <a href="bricolage.html">Bricolage</a>
+    <a href="maison.html">Maison & quotidien</a>
+    <a href="electricite.html">Électricité</a>
+    <a href="creation.html">Création</a>
+    <a href="couture-broderie.html">Couture & Broderie</a>
+    <a href="jardinage.html">Jardin & Jardinage</a>
+    <a href="mecanique.html">Mécanique</a>
+    <a href="objets-anciens.html">Objets anciens</a>
+  </nav>
 </header>
 
-<div class="layout">
+<!-- =========================
+     ZONE AVEC MARGE BEIGE + FIGURINE
+========================= -->
+<div style="display:flex; background:#f5efe6;">
 
-  <!-- FIGURINE GAUCHE -->
-  <aside class="marge-gauche">
-    <img src="images/figurine-accueil.png" alt="Figurine accueil chez-JL">
+  <!-- MARGE GAUCHE AVEC FIGURINE -->
+  <aside style="width:140px; padding:20px; text-align:center;">
+    <img 
+      src="images/figurine-accueil.png" 
+      alt="Figurine accueil chez-JL"
+      style="max-width:100%; height:auto;"
+    >
   </aside>
 
-  <!-- CONTENU CENTRAL -->
-  <main class="contenu">
+  <!-- CONTENU PRINCIPAL -->
+  <main>
 
-    <h2>Bienvenue</h2>
-    <p>
-      Découvrez et partagez des astuces pratiques
-      autour du bricolage, de la maison, de la création
-      et des savoir-faire du quotidien.
-    </p>
+    <section>
+      <h2>🛠️ Les astuces qui sauvent</h2>
+      <p>
+        chez-JL rassemble des astuces pratiques, simples et éprouvées,
+        partagées par des passionnés, artisans et curieux.
+        Chaque contribution est relue avant publication.
+      </p>
+    </section>
 
-    <div class="menu-deux-lignes">
-      <a href="bricolage.html">🔧 Bricolage</a>
-      <a href="maison.html">🏠 Maison</a>
-      <a href="electricite.html">⚡ Électricité</a>
-      <a href="couture-broderie.html">🧵 Couture & Broderie</a>
-      <a href="objets-anciens.html">🏺 Objets anciens</a>
-    </div>
+    <hr class="separation">
+
+    <section>
+      <h2>✍️ Participer</h2>
+      <p>
+        Vous avez une astuce, un savoir-faire ou une idée utile ?
+        Choisissez une rubrique ci-dessus pour proposer votre astuce.
+      </p>
+    </section>
+
+    <hr class="separation">
+
+    <section>
+      <h2>❤️ Soutenir le projet</h2>
+      <p>
+        chez-JL est un projet indépendant.
+        Votre soutien aide à maintenir le site et à diffuser le savoir.
+      </p>
+      <a href="#" class="btn">Faire un don (PayPal)</a>
+    </section>
 
   </main>
-
 </div>
 
 <footer>
@@ -49,4 +82,3 @@
 
 </body>
 </html>
-
