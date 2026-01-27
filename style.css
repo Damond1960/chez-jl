@@ -192,7 +192,7 @@ input[type="url"] {
   transform: translateY(-50%);
 
   /* taille réduite */
-  width: 100px;
+  width: auto;
   height: auto;
 
   z-index: 1;
