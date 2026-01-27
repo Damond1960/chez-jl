@@ -2,19 +2,15 @@
    BASE GÉNÉRALE
 ========================= */
 
-* {
-  box-sizing: border-box;
-}
-
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background: #f5efe6; /* beige général */
+  background: #f5efe6;
   color: #2b1d0f;
 }
 
-h1, h2, h3 {
-  margin: 0 0 15px 0;
+h1, h2 {
+  margin-bottom: 15px;
 }
 
 p {
@@ -27,147 +23,68 @@ a {
 }
 
 /* =========================
-   HEADER / BANDEAU SUPÉRIEUR
+   HEADER / BANDEAU
 ========================= */
 
 header {
-  padding: 20px;
-  text-align: center;
-}
-
-/* Bouton retour / accueil */
-.btn-retour {
-  display: inline-block;
-  background: rgba(255,255,255,0.6);
-  padding: 8px 14px;
-  border-radius: 5px;
-  font-weight: bold;
-  margin-bottom: 12px;
-}
-
-/* Bouton centré */
-.btn-centre {
-  margin-bottom: 12px;
-}
-
-/* =========================
-   COULEURS DES BANDEAUX
-========================= */
-
-.page-accueil header {
   background: #4fb9b2;
   color: white;
-}
-
-.page-bricolage header {
-  background: #c9a36a;
-}
-
-.page-maison header {
-  background: #9ec9a3;
-}
-
-.page-electricite header {
-  background: #c45a4a;
-  color: white;
-}
-
-.page-creation header {
-  background: #b6a4d8;
-}
-
-.page-objets-anciens header {
-  background: #7fb3d5;
-}
-
-.page-couture-broderie header {
-  background: #cfe4f6; /* bleu clair pastel */
-}
-
-/* =========================
-   MENU PRINCIPAL ACCUEIL
-========================= */
-
-.menu-principal {
-  margin-top: 15px;
-}
-
-.menu-deux-lignes {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-.menu-deux-lignes a {
-  width: 22%;
-  min-width: 180px;
-  margin: 6px 10px;
-  font-weight: bold;
-  color: white;
-}
-
-/* =========================
-   STRUCTURE MARGE + CONTENU
-========================= */
-
-.page-structure {
-  display: flex;
-  background: #f5efe6;
-}
-
-/* marge gauche beige */
-.marge-gauche {
-  width: 140px;
-  padding: 20px;
   text-align: center;
-  background: #f5efe6;
+  padding: 25px 20px;
 }
 
-/* figurines */
+/* =========================
+   LAYOUT AVEC FIGURINE
+========================= */
+
+.layout {
+  display: flex;
+  min-height: calc(100vh - 160px);
+}
+
+/* MARGE GAUCHE BEIGE */
+.marge-gauche {
+  width: 220px;
+  background: #e8ddcc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
+}
+
 .marge-gauche img {
   max-width: 100%;
   height: auto;
 }
 
-/* =========================
-   CONTENU PRINCIPAL
-========================= */
-
-main {
-  max-width: 900px;
+/* CONTENU CENTRAL */
+.contenu {
+  flex: 1;
   background: white;
   padding: 30px;
-  margin: 0 auto;
-}
-
-/* Ligne de séparation */
-.separation {
-  border: none;
-  border-top: 1px solid #ddd;
-  margin: 25px 0;
+  max-width: 900px;
 }
 
 /* =========================
-   BOUTONS
+   MENU ACCUEIL
 ========================= */
 
-.btn {
-  display: inline-block;
-  background: #2b1d0f;
-  color: #ffffff;
-  padding: 12px 20px;
-  border-radius: 5px;
-  font-size: 16px;
-  font-weight: bold;
-  cursor: pointer;
+.menu-deux-lignes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 20px;
 }
 
-a.btn,
-a.btn:hover,
-a.btn:visited,
-a.btn:active {
-  color: #ffffff;
-  text-decoration: none;
+.menu-deux-lignes a {
+  width: 220px;
+  margin: 10px;
+  background: #2b1d0f;
+  color: white;
+  padding: 15px;
+  border-radius: 6px;
+  font-weight: bold;
+  text-align: center;
 }
 
 /* =========================
@@ -179,28 +96,4 @@ footer {
   text-align: center;
   padding: 15px;
   font-size: 14px;
-}
-
-/* =========================
-   RESPONSIVE SIMPLE
-========================= */
-
-@media (max-width: 768px) {
-
-  .page-structure {
-    flex-direction: column;
-  }
-
-  .marge-gauche {
-    width: 100%;
-    padding: 10px;
-  }
-
-  main {
-    margin: 0;
-  }
-
-  .menu-deux-lignes a {
-    width: 45%;
-  }
 }
