@@ -162,3 +162,22 @@ footer {
   text-align: center;
   margin: 6px 10px;
 }
+/* Figurines pages */
+.page-avec-figurine {
+  position: relative;
+}
+
+.figurine-gauche {
+  position: absolute;
+  left: -120px; /* décale dans la marge beige */
+  top: 120px;
+  width: 110px;
+  max-width: 30vw;
+  pointer-events: none; /* évite clics involontaires */
+}
+
+@media (max-width: 900px) {
+  .figurine-gauche {
+    display: none; /* cache sur mobile */
+  }
+}
