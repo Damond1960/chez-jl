@@ -205,16 +205,23 @@ footer {
   }
 }
 /* =========================
-   FIGURINE ACCUEIL
+   FIGURINE DÉCORATIVE
 ========================= */
 
-.figurine-accueil {
-  position: fixed;
-  left: 20px;
+.figurine {
+  position: absolute;
+
+  /* placement à gauche du bloc blanc */
+  left: calc(50% - 520px);
+
+  /* centrage vertical par rapport au contenu */
   top: 50%;
   transform: translateY(-50%);
-  max-width: 180px;
+
+  /* taille réduite */
+  width: 120px;
   height: auto;
-  opacity: 0.95;
+
+  z-index: 1;
   pointer-events: none;
 }
