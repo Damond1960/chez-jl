@@ -9,8 +9,8 @@ body {
   color: #2b1d0f;
 }
 
-h1, h2 {
-  margin-bottom: 15px;
+h1, h2, h3 {
+  margin: 0 0 15px 0;
 }
 
 p {
@@ -19,7 +19,6 @@ p {
 
 a {
   color: inherit;
-  text-decoration: none;
 }
 
 /* =========================
@@ -27,64 +26,114 @@ a {
 ========================= */
 
 header {
+  padding: 20px;
+  text-align: center;
+  position: relative;
+}
+
+/* Bouton retour / accueil */
+.btn-retour {
+  display: inline-block;
+  background: rgba(255,255,255,0.6);
+  padding: 8px 14px;
+  border-radius: 5px;
+  font-weight: bold;
+  text-decoration: none;
+  margin-bottom: 12px;
+  color: #2b1d0f;
+}
+
+/* Bouton accueil centré (pages Bricolage & Création) */
+.btn-centre {
+  display: inline-block;
+  margin-bottom: 12px;
+}
+
+/* =========================
+   COULEURS DES BANDEAUX
+========================= */
+
+.page-accueil header {
   background: #4fb9b2;
   color: white;
-  text-align: center;
-  padding: 25px 20px;
+}
+
+.page-bricolage header {
+  background: #c9a36a;
+}
+
+.page-maison header {
+  background: #9ec9a3;
+}
+
+.page-electricite header {
+  background: #c45a4a;
+}
+
+.page-creation header {
+  background: #b6a4d8;
+}
+
+.page-objets-anciens header {
+  background: #7fb3d5;
 }
 
 /* =========================
-   LAYOUT AVEC FIGURINE
+   MENU PRINCIPAL (ACCUEIL)
 ========================= */
 
-.layout {
-  display: flex;
-  min-height: calc(100vh - 160px);
+.menu-principal {
+  margin-top: 15px;
 }
 
-/* MARGE GAUCHE BEIGE */
-.marge-gauche {
-  width: 220px;
-  background: #e8ddcc;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 15px;
+.menu-principal a {
+  margin: 0 10px;
+  text-decoration: none;
+  font-weight: bold;
+  color: white;
 }
 
-.marge-gauche img {
-  max-width: 100%;
-  height: auto;
-}
+/* =========================
+   CONTENU PRINCIPAL
+========================= */
 
-/* CONTENU CENTRAL */
-.contenu {
-  flex: 1;
+main {
+  max-width: 900px;
+  margin: auto;
   background: white;
   padding: 30px;
-  max-width: 900px;
+}
+
+/* Ligne de séparation */
+.separation {
+  border: none;
+  border-top: 1px solid #ddd;
+  margin: 25px 0;
 }
 
 /* =========================
-   MENU ACCUEIL
+   BOUTONS NOIRS (COMMUNS)
 ========================= */
 
-.menu-deux-lignes {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  margin-top: 20px;
+.btn {
+  display: inline-block;
+  background: #2b1d0f;
+  color: #ffffff;
+  padding: 12px 20px;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: bold;
+  text-decoration: none;
+  cursor: pointer;
 }
 
-.menu-deux-lignes a {
-  width: 220px;
-  margin: 10px;
-  background: #2b1d0f;
-  color: white;
-  padding: 15px;
-  border-radius: 6px;
-  font-weight: bold;
-  text-align: center;
+/* Forcer lisibilité et suppression soulignement */
+a.btn,
+a.btn:visited,
+a.btn:hover,
+a.btn:active {
+  color: #ffffff !important;
+  text-decoration: none !important;
 }
 
 /* =========================
@@ -96,4 +145,20 @@ footer {
   text-align: center;
   padding: 15px;
   font-size: 14px;
+}
+/* =========================
+   MENU ACCUEIL SUR 2 LIGNES
+========================= */
+
+.menu-deux-lignes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.menu-deux-lignes a {
+  width: 22%;
+  min-width: 180px;
+  text-align: center;
+  margin: 6px 10px;
 }
