@@ -179,27 +179,27 @@ input[type="url"] {
 }
 
 /* =========================
-   FIGURINE DÉCORATIVE (FIXÉE ET VISIBLE)
+   FIGURINE DANS LE BANDEAU
 ========================= */
 
 .figurine {
-  position: fixed;              /* CLÉ : indépendante du layout */
-  left: 25px;                   /* marge gauche */
-  top: 50%;                     /* centrée verticalement */
-  transform: translateY(-50%);
-  width: 120px;
+  position: absolute;           /* liée au header */
+  left: 50%;                    /* centrée horizontalement */
+  top: 100%;                    /* juste sous le titre */
+  transform: translateX(-50%);
+  width: 180px;                 /* PLUS GRANDE */
   height: auto;
-  z-index: 1;                   /* derrière le contenu blanc */
+  z-index: 3;
   pointer-events: none;
-  opacity: 0.95;
 }
 
-/* Masquée sur écrans étroits */
-@media (max-width: 1000px) {
+/* Masquée sur mobile */
+@media (max-width: 900px) {
   .figurine {
     display: none;
   }
 }
+
 
 /* =========================
    FOOTER
