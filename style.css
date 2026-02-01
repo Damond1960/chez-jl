@@ -186,29 +186,27 @@ input[type="url"] {
 }
 
 /* =========================
-   FIGURINE DÉCORATIVE CENTRÉE ET ADAPTATIVE
+   FIGURINE DÉCORATIVE CENTRÉE ET ADAPTATIVE (PLUS GRANDE)
 ========================= */
 
 .figurine {
-  position: fixed;             /* toujours visible et indépendant du scroll */
-  top: 20px;                   /* distance depuis le haut */
-  left: 50%;                   /* centre horizontal */
+  position: fixed;             
+  top: 20px;                   
+  left: 50%;                   
   transform: translateX(-50%);
-  width: clamp(150px, 20%, 360px);  /* s'adapte à la largeur de l'écran, min 150px, max 360px */
-  height: auto;                /* proportionnel */
-  z-index: 1000;               /* au-dessus de tout */
-  pointer-events: none;        /* ne bloque aucun clic */
+  width: clamp(200px, 25%, 450px);  /* largeur minimale 200px, max 450px, 25% de l’écran */
+  height: auto;                
+  z-index: 1000;               
+  pointer-events: none;        
 }
 
-/* Ajustement supplémentaire sur mobile */
+/* Ajustement sur mobile */
 @media (max-width: 600px) {
   .figurine {
     top: 10px;
-    width: clamp(120px, 35%, 250px); /* un peu plus grande proportionnellement si page petite */
+    width: clamp(150px, 40%, 300px); /* un peu plus grande proportionnellement */
   }
 }
-
-
 /* =========================
    FOOTER
 ========================= */
