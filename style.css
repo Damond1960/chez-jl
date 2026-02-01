@@ -160,58 +160,17 @@ a.btn:active {
 }
 
 /* =========================
-   FORMULAIRES (COMMUN)
+   FIGURINE DÉCORATIVE
 ========================= */
 
-textarea,
-input[type="text"],
-input[type="email"],
-input[type="url"] {
-  width: 100%;
-  padding: 10px;
-  margin: 8px 0 16px 0;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-}
-
-.themes label {
-  display: inline-block;
-  margin-right: 12px;
-}
-
-/* FIGURINES BRICOLAGE, 2X PLUS GRANDES */
 .figurine {
   position: absolute;
-  top: 60px;             /* juste sous le bouton Accueil */
-  width: 380px;          /* 2x plus grande que 190px */
+  left: 20px;
+  top: 120px;
+  width: 120px;
   height: auto;
-  z-index: 1;            /* derrière le texte et bouton */
+  z-index: 5;
   pointer-events: none;
-  opacity: 0.95;
-}
-
-/* Figurine gauche */
-.figurine.gauche {
-  left: 20px;            /* à gauche du texte */
-}
-
-/* Figurine droite */
-.figurine.droite {
-  right: 20px;           /* à droite du texte */
-}
-
-/* Texte et boutons devant */
-header * {
-  position: relative;
-  z-index: 3;
-}
-
-/* Ajustement du header pour donner assez d’espace */
-header {
-  padding: 40px 20px 160px; /* plus bas pour la grande figurine */
-  text-align: center;
-  position: relative;
-  overflow: hidden;
 }
 
 /* Masquée sur mobile */
