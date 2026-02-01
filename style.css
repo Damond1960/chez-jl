@@ -196,7 +196,7 @@ input[type="url"] {
 .figurine {
   position: absolute;
   top: 10px;              /* distance par rapport au haut de la page */
-  left: 100%;              /* centre horizontal */
+  left: 50%;              /* centre horizontal */
   transform: translateX(-50%); /* ajuste pour que le centre de l'image corresponde */
   width: 360px;           /* 2x plus grande */
   height: auto;
