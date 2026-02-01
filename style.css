@@ -27,11 +27,12 @@ a {
 ========================= */
 
 header {
-  padding: 20px;
+  padding: 40px 20px 100px; /* espace en bas pour la figurine */
   text-align: center;
   position: relative;
-  z-index: 2;
+  overflow: hidden;        /* empêche la figurine de déborder */
 }
+
 
 /* Bouton retour / accueil */
 .btn-retour {
@@ -179,18 +180,27 @@ input[type="url"] {
 }
 
 /* =========================
-   FIGURINE DANS LE BANDEAU
+   FIGURINE BANDEAU (GLOBAL)
 ========================= */
 
 .figurine {
-  position: absolute;           /* liée au header */
-  left: 50%;                    /* centrée horizontalement */
-  top: 100%;                    /* juste sous le titre */
+  position: absolute;
+  top: 10px;                 /* TOUT EN HAUT */
+  left: 50%;                 /* centrée horizontalement */
   transform: translateX(-50%);
-  width: 180px;                 /* PLUS GRANDE */
+  width: 150px;              /* taille MOYENNE */
   height: auto;
-  z-index: 3;
+  z-index: 1;
   pointer-events: none;
+  opacity: 0.95;
+}
+
+/* Texte au-dessus de la figurine */
+header h1,
+header p,
+header .btn-retour {
+  position: relative;
+  z-index: 2;
 }
 
 /* Masquée sur mobile */
