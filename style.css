@@ -257,3 +257,36 @@ header .btn-retour:hover {
 .form-mecanique header { background: #6f6f6f; }       /* gris anthracite pastel */
 .form-jardinage header { background: #9ec9a3; }       /* vert doux */
 .form-couture header { background: #b6a4d8; }         /* violet pastel */
+
+/* =========================
+   FIGURINE DÉCORATIVE CENTRÉE ET ADAPTATIVE (PLUS GRANDE)
+========================= */
+
+.figurine {
+  position: fixed;             
+  top: 20px;                   
+  left: 50%;                   
+  transform: translateX(-50%);
+  width: clamp(200px, 25%, 450px);  /* largeur minimale 200px, max 450px, 25% de l’écran */
+  height: auto;                
+  z-index: 1000;               
+  pointer-events: none;        
+}
+
+/* Ajustement sur mobile */
+@media (max-width: 600px) {
+  .figurine {
+    top: 10px;
+    width: clamp(150px, 40%, 300px); /* un peu plus grande proportionnellement */
+  }
+}
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+  background: #ddd;
+  text-align: center;
+  padding: 15px;
+  font-size: 14px;
+}
