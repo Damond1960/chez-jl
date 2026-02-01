@@ -194,8 +194,11 @@ input[type="url"] {
   left: 20px;          /* marge depuis la gauche du header */
   top: 50%;            /* centrée verticalement dans le header */
   transform: translateY(-50%);
-  width: 180px;        /* taille moyenne, ajustable */
+  .figurine {
+  width: 360px;  /* 2x plus grande */
   height: auto;
+}
+
   z-index: 1;          /* derrière le texte et boutons */
   pointer-events: none;
   opacity: 0.95;
