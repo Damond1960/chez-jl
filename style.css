@@ -207,3 +207,53 @@ footer {
 .page-mecanique header { background: #6f6f6f; } /* gris anthracite pastel */
 .page-jardinage header { background: #9ec9a3; } /* vert doux */
 .page-couture header { background: #b6a4d8; } /* violet pastel */
+
+/* =========================
+   HEADER DES FORMULAIRES
+========================= */
+header {
+  position: relative;
+  text-align: center;
+  padding: 40px 20px 20px 20px;
+  color: white;
+}
+
+/* Texte du header */
+header h1 {
+  font-size: 36px;
+  margin-bottom: 5px;
+}
+
+header p {
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+
+/* Bouton retour centré (comme sur pages secondaires) */
+header .btn-retour {
+  display: inline-block;
+  margin-top: 10px;
+  background: rgba(255, 255, 255, 0.25); /* bulle semi-transparente */
+  color: #ffffff;
+  padding: 10px 20px;
+  border-radius: 25px;
+  font-weight: bold;
+  transition: background 0.3s, transform 0.2s;
+}
+
+header .btn-retour:hover {
+  background: rgba(255, 255, 255, 0.4);
+  transform: translateY(-2px);
+}
+
+/* =========================
+   BANDEAUX PAR FORMULAIRE (identiques aux pages)
+========================= */
+.form-bricolage header { background: #c9a36a; }       /* brun */
+.form-maison header { background: #9ec9a3; }          /* vert doux */
+.form-electricite header { background: #c45a4a; }     /* rouge doux */
+.form-creation header { background: #b6a4d8; }        /* violet pastel */
+.form-objets-anciens header { background: #7fb3d5; }  /* bleu pastel */
+.form-mecanique header { background: #6f6f6f; }       /* gris anthracite pastel */
+.form-jardinage header { background: #9ec9a3; }       /* vert doux */
+.form-couture header { background: #b6a4d8; }         /* violet pastel */
