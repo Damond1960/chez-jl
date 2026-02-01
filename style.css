@@ -190,24 +190,26 @@ input[type="url"] {
 ========================= */
 
 /* =========================
-   FIGURINE DÉCORATIVE - CENTRÉE
+   FIGURINE DÉCORATIVE CENTRÉE FIXE
 ========================= */
 
 .figurine {
-  position: absolute;
-  top: 10px;              /* distance par rapport au haut de la page */
-  left: 50%;              /* centre horizontal */
-  transform: translateX(-50%); /* ajuste pour que le centre de l'image corresponde */
-  width: 360px;           /* 2x plus grande */
-  height: auto;
-  z-index: 5;
-  pointer-events: none;   /* ne bloque pas les boutons en dessous */
+  position: fixed;           /* FIXE par rapport à la fenêtre, toujours visible */
+  top: 20px;                 /* distance depuis le haut de la page */
+  left: 50%;                 /* centre horizontal */
+  transform: translateX(-50%); /* centre exact de l'image */
+  max-width: 360px;          /* largeur max */
+  width: 25%;                /* adapte automatiquement à la largeur de l'écran */
+  height: auto;              /* garde les proportions */
+  z-index: 1000;             /* toujours au-dessus du contenu */
+  pointer-events: none;      /* laisse les boutons cliquables en dessous */
 }
 
-/* Masquée sur mobile */
-@media (max-width: 900px) {
+/* Éventuellement réduire sur mobile */
+@media (max-width: 600px) {
   .figurine {
-    display: none;
+    width: 40%;               /* légèrement plus petit sur petit écran */
+    top: 10px;
   }
 }
 
