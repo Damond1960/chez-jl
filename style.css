@@ -183,19 +183,11 @@ input[type="url"] {
 
 .figurine {
   position: absolute;
-
-  /* à gauche du bandeau blanc */
-  left: calc(50% - 520px);
-
-  /* centrée verticalement */
-  top: 50%;
-  transform: translateY(-50%);
-
-  /* taille réduite */
+  left: 20px;
+  top: 120px;
   width: 120px;
   height: auto;
-
-  z-index: 1;
+  z-index: 5;
   pointer-events: none;
 }
 
