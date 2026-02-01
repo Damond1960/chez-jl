@@ -186,30 +186,25 @@ input[type="url"] {
 }
 
 /* =========================
-   FIGURINE UNIQUE
-========================= */
-
-/* =========================
-   FIGURINE DÉCORATIVE CENTRÉE FIXE
+   FIGURINE DÉCORATIVE CENTRÉE ET ADAPTATIVE
 ========================= */
 
 .figurine {
-  position: fixed;           /* FIXE par rapport à la fenêtre, toujours visible */
-  top: 20px;                 /* distance depuis le haut de la page */
-  left: 50%;                 /* centre horizontal */
-  transform: translateX(-50%); /* centre exact de l'image */
-  max-width: 360px;          /* largeur max */
-  width: 25%;                /* adapte automatiquement à la largeur de l'écran */
-  height: auto;              /* garde les proportions */
-  z-index: 1000;             /* toujours au-dessus du contenu */
-  pointer-events: none;      /* laisse les boutons cliquables en dessous */
+  position: fixed;             /* toujours visible et indépendant du scroll */
+  top: 20px;                   /* distance depuis le haut */
+  left: 50%;                   /* centre horizontal */
+  transform: translateX(-50%);
+  width: clamp(150px, 20%, 360px);  /* s'adapte à la largeur de l'écran, min 150px, max 360px */
+  height: auto;                /* proportionnel */
+  z-index: 1000;               /* au-dessus de tout */
+  pointer-events: none;        /* ne bloque aucun clic */
 }
 
-/* Éventuellement réduire sur mobile */
+/* Ajustement supplémentaire sur mobile */
 @media (max-width: 600px) {
   .figurine {
-    width: 40%;               /* légèrement plus petit sur petit écran */
     top: 10px;
+    width: clamp(120px, 35%, 250px); /* un peu plus grande proportionnellement si page petite */
   }
 }
 
