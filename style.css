@@ -52,46 +52,47 @@ header {
 
 /* =========================
    COULEURS DES BANDEAUX
+   (pages + formulaires)
 ========================= */
-
-.page-accueil header {
-  background: #4fb9b2;
-  color: white;
-}
 
 .page-bricolage header {
   background: #c9a36a;
-  color: white;
-}
-
-.page-maison header {
-  background: #9ec9a3;
-  color: white;
-}
-
-.page-electricite header {
-  background: #c45a4a;
-  color: white;
-}
-
-.page-creation header {
-  background: #b6a4d8;
-  color: white;
+  color: #2b1d0f;
 }
 
 .page-objets-anciens header {
   background: #7fb3d5;
-  color: white;
+  color: #ffffff;
+}
+
+.page-maison header {
+  background: #9ec9a3;
+  color: #2b1d0f;
 }
 
 .page-mecanique header {
   background: #6f6f6f; /* anthracite pastel */
-  color: white;
+  color: #ffffff;
+}
+
+.page-electricite header {
+  background: #c45a4a;
+  color: #ffffff;
+}
+
+.page-jardin header {
+  background: #9ec9a3;
+  color: #2b1d0f;
+}
+
+.page-creation header {
+  background: #b6a4d8;
+  color: #2b1d0f;
 }
 
 .page-couture header {
-  background: #a3c4f5; /* bleu pastel clair */
-  color: white;
+  background: #bcd9f2; /* bleu pastel */
+  color: #2b1d0f;
 }
 
 /* =========================
