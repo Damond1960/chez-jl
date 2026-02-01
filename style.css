@@ -7,6 +7,7 @@ body {
   font-family: Arial, sans-serif;
   background: #f5efe6;
   color: #2b1d0f;
+  position: relative; /* IMPORTANT pour la figurine */
 }
 
 h1, h2, h3 {
@@ -29,6 +30,7 @@ header {
   padding: 20px;
   text-align: center;
   position: relative;
+  z-index: 2;
 }
 
 /* Bouton retour / accueil */
@@ -79,7 +81,7 @@ header {
 }
 
 .page-mecanique header {
-  background: #6f6f6f; /* anthracite pastel */
+  background: #6f6f6f;
   color: white;
 }
 
@@ -122,7 +124,7 @@ main {
   background: white;
   padding: 30px;
   position: relative;
-  z-index: 2;
+  z-index: 3; /* AU-DESSUS de la figurine */
 }
 
 /* Ligne de séparation */
@@ -148,7 +150,6 @@ main {
   cursor: pointer;
 }
 
-/* Forcer lisibilité et suppression soulignement */
 a.btn,
 a.btn:visited,
 a.btn:hover,
@@ -178,21 +179,23 @@ input[type="url"] {
 }
 
 /* =========================
-   FIGURINE DÉCORATIVE
+   FIGURINE DÉCORATIVE (FIXÉE ET VISIBLE)
 ========================= */
 
 .figurine {
-  position: absolute;
-  left: 20px;
-  top: 120px;
+  position: fixed;              /* CLÉ : indépendante du layout */
+  left: 25px;                   /* marge gauche */
+  top: 50%;                     /* centrée verticalement */
+  transform: translateY(-50%);
   width: 120px;
   height: auto;
-  z-index: 5;
+  z-index: 1;                   /* derrière le contenu blanc */
   pointer-events: none;
+  opacity: 0.95;
 }
 
-/* Masquée sur mobile */
-@media (max-width: 900px) {
+/* Masquée sur écrans étroits */
+@media (max-width: 1000px) {
   .figurine {
     display: none;
   }
@@ -208,4 +211,3 @@ footer {
   padding: 15px;
   font-size: 14px;
 }
-
