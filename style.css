@@ -179,28 +179,39 @@ input[type="url"] {
   margin-right: 12px;
 }
 
-/* =========================
-   FIGURINE BANDEAU (GLOBAL)
-========================= */
-
+/* FIGURINES BRICOLAGE, 2X PLUS GRANDES */
 .figurine {
   position: absolute;
-  top: 55px;                 /* descend sous le bouton Accueil */
-  left: 50%;
-  transform: translateX(-50%);
-  width: 190px;              /* PLUS GRANDE */
+  top: 60px;             /* juste sous le bouton Accueil */
+  width: 380px;          /* 2x plus grande que 190px */
   height: auto;
-  z-index: 1;                /* DERRIÈRE le texte et boutons */
+  z-index: 1;            /* derrière le texte et bouton */
   pointer-events: none;
   opacity: 0.95;
 }
 
-/* Texte au-dessus de la figurine */
-header h1,
-header p,
-header .btn-retour {
+/* Figurine gauche */
+.figurine.gauche {
+  left: 20px;            /* à gauche du texte */
+}
+
+/* Figurine droite */
+.figurine.droite {
+  right: 20px;           /* à droite du texte */
+}
+
+/* Texte et boutons devant */
+header * {
   position: relative;
-  z-index: 2;
+  z-index: 3;
+}
+
+/* Ajustement du header pour donner assez d’espace */
+header {
+  padding: 40px 20px 160px; /* plus bas pour la grande figurine */
+  text-align: center;
+  position: relative;
+  overflow: hidden;
 }
 
 /* Masquée sur mobile */
@@ -209,7 +220,6 @@ header .btn-retour {
     display: none;
   }
 }
-
 
 /* =========================
    FOOTER
