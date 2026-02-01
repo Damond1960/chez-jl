@@ -19,17 +19,25 @@ p {
 
 a {
   color: inherit;
-  text-decoration: none;
 }
 
 /* =========================
-   HEADER / BANDEAU
+   HEADER / BANDEAUX
 ========================= */
 
-header {
-  padding: 20px;
-  text-align: center;
+/* Bandeau blanc : titre et slogan */
+.bandeau-titre {
+  background: #ffffff;
+  color: #2b1d0f;
+  padding: 30px 20px;
   position: relative;
+  text-align: center;
+}
+
+/* Bandeau vert pastel : menu / boutons */
+.bandeau-menu {
+  background: #7fc7b5; /* vert pastel léger */
+  padding: 20px 10px;
 }
 
 /* Bouton retour / accueil */
@@ -39,9 +47,9 @@ header {
   padding: 8px 14px;
   border-radius: 5px;
   font-weight: bold;
+  text-decoration: none;
   margin-bottom: 12px;
   color: #2b1d0f;
-  text-decoration: none;
 }
 
 /* Bouton accueil centré */
@@ -51,53 +59,17 @@ header {
 }
 
 /* =========================
-   BANDEAUX SUPÉRIEURS
-   PAGES + FORMULAIRES
+   COULEURS DES BANDEAUX AUTRES PAGES
 ========================= */
 
-header {
-  color: #ffffff;
-}
-
-/* Bricolage */
-.page-bricolage header {
-  background-color: #8b5a2b; /* brun chaud */
-}
-
-/* Objets anciens */
-.page-objets-anciens header {
-  background-color: #5a7d8c; /* bleu-gris ancien */
-}
-
-/* Maison */
-.page-maison header {
-  background-color: #6b8e7f; /* vert maison */
-}
-
-/* Mécanique */
-.page-mecanique header {
-  background-color: #4f4f4f; /* gris foncé */
-}
-
-/* Électricité */
-.page-electricite header {
-  background-color: #b33a3a; /* rouge électrique */
-}
-
-/* Jardin / Jardinage */
-.page-jardin header {
-  background-color: #3f7d3c; /* vert jardin */
-}
-
-/* Création */
-.page-creation header {
-  background-color: #7b5ea7; /* violet créatif */
-}
-
-/* Couture & broderie */
-.page-couture header {
-  background-color: #4f81bd; /* bleu textile */
-}
+.page-bricolage header, .page-bricolage .bandeau-menu { background: #c9a36a; color: white; }
+.page-maison header, .page-maison .bandeau-menu { background: #9ec9a3; color: white; }
+.page-electricite header, .page-electricite .bandeau-menu { background: #c45a4a; color: white; }
+.page-creation header, .page-creation .bandeau-menu { background: #b6a4d8; color: white; }
+.page-objets-anciens header, .page-objets-anciens .bandeau-menu { background: #7fb3d5; color: white; }
+.page-mecanique header, .page-mecanique .bandeau-menu { background: #6f6f6f; color: white; }
+.page-jardinage header, .page-jardinage .bandeau-menu { background: #9ec9a3; color: white; }
+.page-couture header, .page-couture .bandeau-menu { background: #b6a4d8; color: white; }
 
 /* =========================
    MENU PRINCIPAL (ACCUEIL)
@@ -105,12 +77,19 @@ header {
 
 .menu-principal {
   margin-top: 15px;
+  text-align: center;
 }
 
 .menu-principal a {
-  margin: 0 10px;
+  margin: 5px 10px;
+  text-decoration: none;
   font-weight: bold;
   color: white;
+  display: inline-block;
+  background: #2b1d0f;
+  padding: 12px 20px;
+  border-radius: 5px;
+  font-size: 16px;
 }
 
 /* Menu accueil sur 2 lignes */
@@ -118,13 +97,6 @@ header {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-}
-
-.menu-deux-lignes a {
-  width: 22%;
-  min-width: 180px;
-  text-align: center;
-  margin: 6px 10px;
 }
 
 /* =========================
@@ -159,9 +131,11 @@ main {
   border-radius: 5px;
   font-size: 16px;
   font-weight: bold;
+  text-decoration: none;
   cursor: pointer;
 }
 
+/* Forcer lisibilité et suppression soulignement */
 a.btn,
 a.btn:visited,
 a.btn:hover,
@@ -191,27 +165,34 @@ input[type="url"] {
 }
 
 /* =========================
-   FIGURINE DÉCORATIVE CENTRÉE ET ADAPTATIVE (PLUS GRANDE)
+   FIGURINE DÉCORATIVE
 ========================= */
 
-.figurine {
-  position: fixed;             
-  top: 20px;                   
-  left: 50%;                   
-  transform: translateX(-50%);
-  width: clamp(200px, 25%, 450px);  /* largeur minimale 200px, max 450px, 25% de l’écran */
-  height: auto;                
-  z-index: 1000;               
-  pointer-events: none;        
+.figurine-accueil {
+  position: absolute;
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 140px;
+  height: auto;
+  pointer-events: none;
+  z-index: 2;
 }
 
-/* Ajustement sur mobile */
-@media (max-width: 600px) {
-  .figurine {
-    top: 10px;
-    width: clamp(150px, 40%, 300px); /* un peu plus grande proportionnellement */
+/* Responsive : réduire figurine sur écran moyen */
+@media (max-width: 1100px) {
+  .figurine-accueil {
+    width: 110px;
   }
 }
+
+/* Masquer sur petit écran */
+@media (max-width: 700px) {
+  .figurine-accueil {
+    display: none;
+  }
+}
+
 /* =========================
    FOOTER
 ========================= */
@@ -222,3 +203,4 @@ footer {
   padding: 15px;
   font-size: 14px;
 }
+
