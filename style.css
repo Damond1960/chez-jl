@@ -1,7 +1,6 @@
 /* =========================
    BASE GÉNÉRALE
 ========================= */
-
 body {
   margin: 0;
   font-family: Arial, sans-serif;
@@ -38,9 +37,43 @@ a {
 .bandeau-menu {
   background: #7fc7b5; /* vert pastel léger */
   padding: 20px 10px;
+  text-align: center;
 }
 
-/* Bouton retour / accueil */
+/* =========================
+   BOUTONS / MENU ACCUEIL
+========================= */
+
+/* Boutons pseudo-transparents comme sur les autres pages */
+.menu-principal a {
+  display: inline-block;
+  background: rgba(43, 29, 15, 0.85); /* noir légèrement transparent */
+  color: #ffffff;
+  padding: 12px 20px;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: bold;
+  text-decoration: none;
+  margin: 5px 10px;
+  transition: background 0.3s, transform 0.2s;
+}
+
+/* Hover : foncé et légèrement levé */
+.menu-principal a:hover {
+  background: rgba(43, 29, 15, 1);
+  transform: translateY(-2px);
+}
+
+/* Menu accueil sur 2 lignes */
+.menu-deux-lignes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* =========================
+   BOUTONS RETOUR / ACCUEIL
+========================= */
 .btn-retour {
   display: inline-block;
   background: rgba(255,255,255,0.6);
@@ -52,16 +85,14 @@ a {
   color: #2b1d0f;
 }
 
-/* Bouton accueil centré */
 .btn-centre {
   display: inline-block;
   margin-bottom: 12px;
 }
 
 /* =========================
-   COULEURS DES BANDEAUX AUTRES PAGES
+   BANDEAUX AUTRES PAGES
 ========================= */
-
 .page-bricolage header, .page-bricolage .bandeau-menu { background: #c9a36a; color: white; }
 .page-maison header, .page-maison .bandeau-menu { background: #9ec9a3; color: white; }
 .page-electricite header, .page-electricite .bandeau-menu { background: #c45a4a; color: white; }
@@ -72,37 +103,8 @@ a {
 .page-couture header, .page-couture .bandeau-menu { background: #b6a4d8; color: white; }
 
 /* =========================
-   MENU PRINCIPAL (ACCUEIL)
-========================= */
-
-.menu-principal {
-  margin-top: 15px;
-  text-align: center;
-}
-
-.menu-principal a {
-  margin: 5px 10px;
-  text-decoration: none;
-  font-weight: bold;
-  color: white;
-  display: inline-block;
-  background: #2b1d0f;
-  padding: 12px 20px;
-  border-radius: 5px;
-  font-size: 16px;
-}
-
-/* Menu accueil sur 2 lignes */
-.menu-deux-lignes {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-/* =========================
    CONTENU PRINCIPAL
 ========================= */
-
 main {
   max-width: 900px;
   margin: auto;
@@ -122,7 +124,6 @@ main {
 /* =========================
    BOUTONS NOIRS (COMMUNS)
 ========================= */
-
 .btn {
   display: inline-block;
   background: #2b1d0f;
@@ -147,7 +148,6 @@ a.btn:active {
 /* =========================
    FORMULAIRES (COMMUN)
 ========================= */
-
 textarea,
 input[type="text"],
 input[type="email"],
@@ -165,9 +165,8 @@ input[type="url"] {
 }
 
 /* =========================
-   FIGURINE DÉCORATIVE
+   FIGURINE DÉCORATIVE ACCUEIL
 ========================= */
-
 .figurine-accueil {
   position: absolute;
   left: 20px;
@@ -196,11 +195,9 @@ input[type="url"] {
 /* =========================
    FOOTER
 ========================= */
-
 footer {
   background: #ddd;
   text-align: center;
   padding: 15px;
   font-size: 14px;
 }
-
