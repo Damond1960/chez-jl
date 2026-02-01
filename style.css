@@ -44,31 +44,27 @@ a {
    BOUTONS / MENU ACCUEIL
 ========================= */
 
-/* Boutons pseudo-transparents comme sur les autres pages */
+/* =========================
+   BOUTONS MENU ACCUEIL (bulle)
+========================= */
 .menu-principal a {
   display: inline-block;
-  background: rgba(43, 29, 15, 0.85); /* noir légèrement transparent */
-  color: #ffffff;
+  background: rgba(255, 255, 255, 0.25); /* fond semi-transparent, style bulle */
+  color: #ffffff; /* texte blanc */
   padding: 12px 20px;
-  border-radius: 5px;
+  border-radius: 25px; /* arrondi total pour effet bulle */
   font-size: 16px;
   font-weight: bold;
   text-decoration: none;
   margin: 5px 10px;
   transition: background 0.3s, transform 0.2s;
+  backdrop-filter: blur(4px); /* optionnel : léger flou derrière */
 }
 
-/* Hover : foncé et légèrement levé */
+/* Hover : légèrement plus opaque et effet levé */
 .menu-principal a:hover {
-  background: rgba(43, 29, 15, 1);
+  background: rgba(255, 255, 255, 0.4);
   transform: translateY(-2px);
-}
-
-/* Menu accueil sur 2 lignes */
-.menu-deux-lignes {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
 }
 
 /* =========================
