@@ -9,97 +9,87 @@ body {
 }
 
 h1, h2, h3 {
-  margin: 0 0 15px 0;
+  margin: 0 0 10px 0;
 }
 
 p {
   line-height: 1.6;
+  margin: 0 0 15px 0;
 }
 
 a {
   color: inherit;
+  text-decoration: none;
 }
 
 /* =========================
-   HEADER / BANDEAUX
+   HEADER / BANDEAU
 ========================= */
-
-/* Bandeau blanc : titre et slogan */
-.bandeau-titre {
-  background: #ffffff;
-  color: #2b1d0f;
-  padding: 30px 20px;
+header {
   position: relative;
   text-align: center;
+  padding: 40px 20px 20px 20px;
+  color: white;
 }
 
-/* Bandeau vert pastel : menu / boutons */
-.bandeau-menu {
-  background: #7fc7b5; /* vert pastel léger */
-  padding: 20px 10px;
-  text-align: center;
+/* Texte du header */
+header h1 {
+  font-size: 36px;
+  margin-bottom: 5px;
 }
 
-/* =========================
-   BOUTONS / MENU ACCUEIL
-========================= */
+header p {
+  font-size: 18px;
+  margin-bottom: 15px;
+}
 
-/* =========================
-   BOUTONS MENU ACCUEIL (bulle)
-========================= */
-.menu-principal a {
+/* Bouton Accueil centré */
+header .btn-retour {
   display: inline-block;
-  background: rgba(255, 255, 255, 0.25); /* fond semi-transparent, style bulle */
-  color: #ffffff; /* texte blanc */
-  padding: 12px 20px;
-  border-radius: 25px; /* arrondi total pour effet bulle */
-  font-size: 16px;
+  margin-top: 10px;
+  background: rgba(255, 255, 255, 0.25); /* fond bulle semi-transparent */
+  color: #ffffff;
+  padding: 10px 20px;
+  border-radius: 25px;
   font-weight: bold;
-  text-decoration: none;
-  margin: 5px 10px;
   transition: background 0.3s, transform 0.2s;
-  backdrop-filter: blur(4px); /* optionnel : léger flou derrière */
 }
 
-/* Hover : légèrement plus opaque et effet levé */
-.menu-principal a:hover {
+header .btn-retour:hover {
   background: rgba(255, 255, 255, 0.4);
   transform: translateY(-2px);
 }
 
 /* =========================
-   BOUTONS RETOUR / ACCUEIL
+   FIGURINE CENTRÉE
 ========================= */
-.btn-retour {
-  display: inline-block;
-  background: rgba(255,255,255,0.6);
-  padding: 8px 14px;
-  border-radius: 5px;
-  font-weight: bold;
-  text-decoration: none;
-  margin-bottom: 12px;
-  color: #2b1d0f;
+.figurine {
+  position: absolute;
+  top: 50%; /* centrée verticalement dans le header */
+  left: 50%; /* centrée horizontalement */
+  transform: translate(-50%, -50%); /* exactement au centre */
+  width: 150px; /* taille moyenne, ajustable */
+  height: auto;
+  z-index: 1;
+  pointer-events: none;
 }
 
-.btn-centre {
-  display: inline-block;
-  margin-bottom: 12px;
+/* Responsive : réduire la figurine sur écran moyen */
+@media (max-width: 1100px) {
+  .figurine {
+    width: 120px;
+  }
+}
+
+/* Masquer figurine sur petit écran */
+@media (max-width: 700px) {
+  .figurine {
+    display: none;
+  }
 }
 
 /* =========================
-   BANDEAUX AUTRES PAGES
-========================= */
-.page-bricolage header, .page-bricolage .bandeau-menu { background: #c9a36a; color: white; }
-.page-maison header, .page-maison .bandeau-menu { background: #9ec9a3; color: white; }
-.page-electricite header, .page-electricite .bandeau-menu { background: #c45a4a; color: white; }
-.page-creation header, .page-creation .bandeau-menu { background: #b6a4d8; color: white; }
-.page-objets-anciens header, .page-objets-anciens .bandeau-menu { background: #7fb3d5; color: white; }
-.page-mecanique header, .page-mecanique .bandeau-menu { background: #6f6f6f; color: white; }
-.page-jardinage header, .page-jardinage .bandeau-menu { background: #9ec9a3; color: white; }
-.page-couture header, .page-couture .bandeau-menu { background: #b6a4d8; color: white; }
-
-/* =========================
-   CONTENU PRINCIPAL
+   MAIN
 ========================= */
 main {
   max-width: 900px;
@@ -128,11 +118,9 @@ main {
   border-radius: 5px;
   font-size: 16px;
   font-weight: bold;
-  text-decoration: none;
   cursor: pointer;
 }
 
-/* Forcer lisibilité et suppression soulignement */
 a.btn,
 a.btn:visited,
 a.btn:hover,
@@ -161,34 +149,6 @@ input[type="url"] {
 }
 
 /* =========================
-   FIGURINE DÉCORATIVE ACCUEIL
-========================= */
-.figurine-accueil {
-  position: absolute;
-  left: 20px;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 140px;
-  height: auto;
-  pointer-events: none;
-  z-index: 2;
-}
-
-/* Responsive : réduire figurine sur écran moyen */
-@media (max-width: 1100px) {
-  .figurine-accueil {
-    width: 110px;
-  }
-}
-
-/* Masquer sur petit écran */
-@media (max-width: 700px) {
-  .figurine-accueil {
-    display: none;
-  }
-}
-
-/* =========================
    FOOTER
 ========================= */
 footer {
@@ -197,3 +157,53 @@ footer {
   padding: 15px;
   font-size: 14px;
 }
+
+/* =========================
+   MENU ACCUEIL SUR 2 LIGNES
+========================= */
+.menu-principal {
+  margin-top: 15px;
+}
+
+.menu-principal a {
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.25); /* effet bulle semi-transparent */
+  color: #ffffff;
+  padding: 12px 20px;
+  border-radius: 25px;
+  font-weight: bold;
+  margin: 5px 10px;
+  transition: background 0.3s, transform 0.2s;
+  text-decoration: none;
+}
+
+.menu-principal a:hover {
+  background: rgba(255, 255, 255, 0.4);
+  transform: translateY(-2px);
+}
+
+.menu-deux-lignes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.menu-deux-lignes a {
+  width: 22%;
+  min-width: 180px;
+  text-align: center;
+  margin: 6px 10px;
+}
+
+/* =========================
+   BANDEAUX PAR PAGE
+========================= */
+.page-accueil header { background: #4fb9b2; } /* vert pastel */
+.page-bricolage header { background: #c9a36a; } /* brun */
+.page-maison header { background: #9ec9a3; } /* vert doux */
+.page-electricite header { background: #c45a4a; } /* rouge doux */
+.page-creation header { background: #b6a4d8; } /* violet pastel */
+.page-objets-anciens header { background: #7fb3d5; } /* bleu pastel */
+.page-mecanique header { background: #6f6f6f; } /* gris anthracite pastel */
+.page-jardinage header { background: #9ec9a3; } /* vert doux */
+.page-couture header { background: #b6a4d8; } /* violet pastel */
