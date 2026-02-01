@@ -7,7 +7,6 @@ body {
   font-family: Arial, sans-serif;
   background: #f5efe6;
   color: #2b1d0f;
-  position: relative; /* IMPORTANT pour la figurine */
 }
 
 h1, h2, h3 {
@@ -20,6 +19,7 @@ p {
 
 a {
   color: inherit;
+  text-decoration: none;
 }
 
 /* =========================
@@ -27,12 +27,10 @@ a {
 ========================= */
 
 header {
-  padding: 40px 20px 100px; /* espace en bas pour la figurine */
+  padding: 20px;
   text-align: center;
   position: relative;
-  overflow: hidden;        /* empêche la figurine de déborder */
 }
-
 
 /* Bouton retour / accueil */
 .btn-retour {
@@ -41,9 +39,9 @@ header {
   padding: 8px 14px;
   border-radius: 5px;
   font-weight: bold;
-  text-decoration: none;
   margin-bottom: 12px;
   color: #2b1d0f;
+  text-decoration: none;
 }
 
 /* Bouton accueil centré */
@@ -63,26 +61,36 @@ header {
 
 .page-bricolage header {
   background: #c9a36a;
+  color: white;
 }
 
 .page-maison header {
   background: #9ec9a3;
+  color: white;
 }
 
 .page-electricite header {
   background: #c45a4a;
+  color: white;
 }
 
 .page-creation header {
   background: #b6a4d8;
+  color: white;
 }
 
 .page-objets-anciens header {
   background: #7fb3d5;
+  color: white;
 }
 
 .page-mecanique header {
-  background: #6f6f6f;
+  background: #6f6f6f; /* anthracite pastel */
+  color: white;
+}
+
+.page-couture header {
+  background: #a3c4f5; /* bleu pastel clair */
   color: white;
 }
 
@@ -96,7 +104,6 @@ header {
 
 .menu-principal a {
   margin: 0 10px;
-  text-decoration: none;
   font-weight: bold;
   color: white;
 }
@@ -125,7 +132,7 @@ main {
   background: white;
   padding: 30px;
   position: relative;
-  z-index: 3; /* AU-DESSUS de la figurine */
+  z-index: 2;
 }
 
 /* Ligne de séparation */
@@ -147,7 +154,6 @@ main {
   border-radius: 5px;
   font-size: 16px;
   font-weight: bold;
-  text-decoration: none;
   cursor: pointer;
 }
 
@@ -160,17 +166,45 @@ a.btn:active {
 }
 
 /* =========================
-   FIGURINE DÉCORATIVE
+   FORMULAIRES (COMMUN)
+========================= */
+
+textarea,
+input[type="text"],
+input[type="email"],
+input[type="url"] {
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0 16px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.themes label {
+  display: inline-block;
+  margin-right: 12px;
+}
+
+/* =========================
+   FIGURINE UNIQUE
 ========================= */
 
 .figurine {
   position: absolute;
-  left: 20px;
-  top: 120px;
-  width: 120px;
+  left: 20px;          /* marge depuis la gauche du header */
+  top: 50%;            /* centrée verticalement dans le header */
+  transform: translateY(-50%);
+  width: 180px;        /* taille moyenne, ajustable */
   height: auto;
-  z-index: 5;
+  z-index: 1;          /* derrière le texte et boutons */
   pointer-events: none;
+  opacity: 0.95;
+}
+
+/* Assurer que le texte et boutons restent au-dessus */
+header * {
+  position: relative;
+  z-index: 2;
 }
 
 /* Masquée sur mobile */
