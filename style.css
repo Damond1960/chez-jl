@@ -189,25 +189,19 @@ input[type="url"] {
    FIGURINE UNIQUE
 ========================= */
 
+/* =========================
+   FIGURINE DÉCORATIVE - CENTRÉE
+========================= */
+
 .figurine {
   position: absolute;
-  left: 20px;          /* marge depuis la gauche du header */
-  top: 50%;            /* centrée verticalement dans le header */
-  transform: translateY(-50%);
-  .figurine {
-  width: 360px;  /* 2x plus grande */
+  top: 10px;              /* distance par rapport au haut de la page */
+  left: 50%;              /* centre horizontal */
+  transform: translateX(-50%); /* ajuste pour que le centre de l'image corresponde */
+  width: 360px;           /* 2x plus grande */
   height: auto;
-}
-
-  z-index: 1;          /* derrière le texte et boutons */
-  pointer-events: none;
-  opacity: 0.95;
-}
-
-/* Assurer que le texte et boutons restent au-dessus */
-header * {
-  position: relative;
-  z-index: 2;
+  z-index: 5;
+  pointer-events: none;   /* ne bloque pas les boutons en dessous */
 }
 
 /* Masquée sur mobile */
@@ -216,6 +210,7 @@ header * {
     display: none;
   }
 }
+
 
 /* =========================
    FOOTER
