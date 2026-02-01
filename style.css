@@ -51,48 +51,52 @@ header {
 }
 
 /* =========================
-   COULEURS DES BANDEAUX
-   (pages + formulaires)
+   BANDEAUX SUPÉRIEURS
+   PAGES + FORMULAIRES
 ========================= */
 
+header {
+  color: #ffffff;
+}
+
+/* Bricolage */
 .page-bricolage header {
-  background: #c9a36a;
-  color: #2b1d0f;
+  background-color: #8b5a2b; /* brun chaud */
 }
 
+/* Objets anciens */
 .page-objets-anciens header {
-  background: #7fb3d5;
-  color: #ffffff;
+  background-color: #5a7d8c; /* bleu-gris ancien */
 }
 
+/* Maison */
 .page-maison header {
-  background: #9ec9a3;
-  color: #2b1d0f;
+  background-color: #6b8e7f; /* vert maison */
 }
 
+/* Mécanique */
 .page-mecanique header {
-  background: #6f6f6f; /* anthracite pastel */
-  color: #ffffff;
+  background-color: #4f4f4f; /* gris foncé */
 }
 
+/* Électricité */
 .page-electricite header {
-  background: #c45a4a;
-  color: #ffffff;
+  background-color: #b33a3a; /* rouge électrique */
 }
 
+/* Jardin / Jardinage */
 .page-jardin header {
-  background: #9ec9a3;
-  color: #2b1d0f;
+  background-color: #3f7d3c; /* vert jardin */
 }
 
+/* Création */
 .page-creation header {
-  background: #b6a4d8;
-  color: #2b1d0f;
+  background-color: #7b5ea7; /* violet créatif */
 }
 
+/* Couture & broderie */
 .page-couture header {
-  background: #bcd9f2; /* bleu pastel */
-  color: #2b1d0f;
+  background-color: #4f81bd; /* bleu textile */
 }
 
 /* =========================
