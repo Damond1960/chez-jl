@@ -1,6 +1,11 @@
 /* =========================
    BASE GÉNÉRALE
 ========================= */
+
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   font-family: Arial, sans-serif;
@@ -9,331 +14,230 @@ body {
 }
 
 h1, h2, h3 {
-  margin: 0 0 10px 0;
+  margin: 0 0 12px 0;
 }
 
 p {
   line-height: 1.6;
-  margin: 0 0 15px 0;
 }
 
 a {
-  color: inherit;
   text-decoration: none;
+  color: inherit;
 }
 
 /* =========================
-   HEADER / BANDEAU
+   HEADER / BANDEAU SUPÉRIEUR
 ========================= */
+
 header {
   position: relative;
   text-align: center;
-  padding: 40px 20px 20px 20px;
-  color: white;
+  padding: 30px 20px 40px;
+  overflow: hidden;
 }
 
-/* Texte du header */
-header h1 {
-  font-size: 36px;
-  margin-bottom: 5px;
+/* Contenu centré du bandeau */
+.header-contenu {
+  position: relative;
+  z-index: 2;
 }
 
+/* Titres bandeau */
+header h1,
 header p {
-  font-size: 18px;
-  margin-bottom: 15px;
-}
-
-/* Bouton Accueil centré */
-header .btn-retour {
-  display: inline-block;
-  margin-top: 10px;
-  background: rgba(255, 255, 255, 0.25); /* fond bulle semi-transparent */
   color: #ffffff;
-  padding: 10px 20px;
-  border-radius: 25px;
-  font-weight: bold;
-  transition: background 0.3s, transform 0.2s;
-}
-
-header .btn-retour:hover {
-  background: rgba(255, 255, 255, 0.4);
-  transform: translateY(-2px);
 }
 
 /* =========================
-   FIGURINE CENTRÉE
+   BOUTON ACCUEIL / RETOUR
 ========================= */
+
+.btn-retour {
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.65);
+  padding: 10px 18px;
+  border-radius: 12px;
+  font-weight: bold;
+  color: #2b1d0f;
+  margin-bottom: 14px;
+}
+
+/* =========================
+   FIGURINE (UNE SEULE)
+========================= */
+
 .figurine {
   position: absolute;
-  top: 50%; /* centrée verticalement dans le header */
-  left: 50%; /* centrée horizontalement */
-  transform: translate(-50%, -50%); /* exactement au centre */
-  width: 150px; /* taille moyenne, ajustable */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-height: 80%;
+  max-width: 220px;
+  width: auto;
   height: auto;
   z-index: 1;
   pointer-events: none;
 }
 
-/* Responsive : réduire la figurine sur écran moyen */
-@media (max-width: 1100px) {
+/* Adaptation écran étroit */
+@media (max-width: 900px) {
   .figurine {
-    width: 120px;
+    max-width: 180px;
+    opacity: 0.95;
   }
 }
 
-/* Masquer figurine sur petit écran */
-@media (max-width: 700px) {
+@media (max-width: 600px) {
   .figurine {
-    display: none;
+    max-width: 150px;
   }
 }
 
 /* =========================
-   MAIN
+   COULEURS DES BANDEAUX
 ========================= */
+
+/* Accueil */
+.page-accueil header {
+  background: #8fc8a8; /* vert pastel */
+}
+
+/* Pages thématiques */
+.page-bricolage header {
+  background: #c9a36a;
+}
+
+.page-objets-anciens header {
+  background: #7fb3d5;
+}
+
+.page-maison header {
+  background: #9ec9a3;
+}
+
+.page-mecanique header {
+  background: #6f6f6f;
+}
+
+.page-electricite header {
+  background: #c45a4a;
+}
+
+.page-jardinage header {
+  background: #7dbb8a;
+}
+
+.page-creation header {
+  background: #b6a4d8;
+}
+
+.page-couture header {
+  background: #d8a4b8;
+}
+
+/* =========================
+   MENU ACCUEIL (BOUTONS BULLE)
+========================= */
+
+.menu-principal {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.menu-principal a {
+  background: rgba(255, 255, 255, 0.55);
+  color: #ffffff;
+  padding: 12px 18px;
+  border-radius: 18px;
+  font-weight: bold;
+  margin: 6px 10px;
+  min-width: 180px;
+  text-align: center;
+}
+
+/* =========================
+   CONTENU PRINCIPAL
+========================= */
+
 main {
   max-width: 900px;
   margin: auto;
-  background: white;
+  background: #ffffff;
   padding: 30px;
   position: relative;
   z-index: 2;
 }
 
-/* Ligne de séparation */
 .separation {
   border: none;
   border-top: 1px solid #ddd;
-  margin: 25px 0;
+  margin: 30px 0;
 }
 
 /* =========================
-   BOUTONS NOIRS (COMMUNS)
+   BOUTONS PRINCIPAUX
 ========================= */
+
 .btn {
   display: inline-block;
   background: #2b1d0f;
   color: #ffffff;
-  padding: 12px 20px;
-  border-radius: 5px;
-  font-size: 16px;
+  padding: 12px 22px;
+  border-radius: 10px;
   font-weight: bold;
   cursor: pointer;
 }
 
-a.btn,
-a.btn:visited,
-a.btn:hover,
-a.btn:active {
-  color: #ffffff !important;
-  text-decoration: none !important;
-}
-
 /* =========================
-   FORMULAIRES (COMMUN)
-========================= */
-textarea,
-input[type="text"],
-input[type="email"],
-input[type="url"] {
-  width: 100%;
-  padding: 10px;
-  margin: 8px 0 16px 0;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-}
-
-.themes label {
-  display: inline-block;
-  margin-right: 12px;
-}
-
-/* =========================
-   FOOTER
-========================= */
-footer {
-  background: #ddd;
-  text-align: center;
-  padding: 15px;
-  font-size: 14px;
-}
-
-/* =========================
-   MENU ACCUEIL SUR 2 LIGNES
-========================= */
-.menu-principal {
-  margin-top: 15px;
-}
-
-.menu-principal a {
-  display: inline-block;
-  background: rgba(255, 255, 255, 0.25); /* effet bulle semi-transparent */
-  color: #ffffff;
-  padding: 12px 20px;
-  border-radius: 25px;
-  font-weight: bold;
-  margin: 5px 10px;
-  transition: background 0.3s, transform 0.2s;
-  text-decoration: none;
-}
-
-.menu-principal a:hover {
-  background: rgba(255, 255, 255, 0.4);
-  transform: translateY(-2px);
-}
-
-.menu-deux-lignes {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-.menu-deux-lignes a {
-  width: 22%;
-  min-width: 180px;
-  text-align: center;
-  margin: 6px 10px;
-}
-
-/* =========================
-   BANDEAUX PAR PAGE
-========================= */
-.page-accueil header { background: #4fb9b2; } /* vert pastel */
-.page-bricolage header { background: #c9a36a; } /* brun */
-.page-maison header { background: #9ec9a3; } /* vert doux */
-.page-electricite header { background: #c45a4a; } /* rouge doux */
-.page-creation header { background: #b6a4d8; } /* violet pastel */
-.page-objets-anciens header { background: #7fb3d5; } /* bleu pastel */
-.page-mecanique header { background: #6f6f6f; } /* gris anthracite pastel */
-.page-jardinage header { background: #9ec9a3; } /* vert doux */
-.page-couture header { background: #b6a4d8; } /* violet pastel */
-
-/* =========================
-   HEADER DES FORMULAIRES
-========================= */
-header {
-  position: relative;
-  text-align: center;
-  padding: 40px 20px 20px 20px;
-  color: white;
-}
-
-/* Texte du header */
-header h1 {
-  font-size: 36px;
-  margin-bottom: 5px;
-}
-
-header p {
-  font-size: 18px;
-  margin-bottom: 15px;
-}
-
-/* Bouton retour centré (comme sur pages secondaires) */
-header .btn-retour {
-  display: inline-block;
-  margin-top: 10px;
-  background: rgba(255, 255, 255, 0.25); /* bulle semi-transparente */
-  color: #ffffff;
-  padding: 10px 20px;
-  border-radius: 25px;
-  font-weight: bold;
-  transition: background 0.3s, transform 0.2s;
-}
-
-header .btn-retour:hover {
-  background: rgba(255, 255, 255, 0.4);
-  transform: translateY(-2px);
-}
-
-/* =========================
-   BANDEAUX PAR FORMULAIRE (identiques aux pages)
-========================= */
-.form-bricolage header { background: #c9a36a; }       /* brun */
-.form-maison header { background: #9ec9a3; }          /* vert doux */
-.form-electricite header { background: #c45a4a; }     /* rouge doux */
-.form-creation header { background: #b6a4d8; }        /* violet pastel */
-.form-objets-anciens header { background: #7fb3d5; }  /* bleu pastel */
-.form-mecanique header { background: #6f6f6f; }       /* gris anthracite pastel */
-.form-jardinage header { background: #9ec9a3; }       /* vert doux */
-.form-couture header { background: #b6a4d8; }         /* violet pastel */
-
-/* =========================
-   FIGURINE DÉCORATIVE CENTRÉE ET ADAPTATIVE (PLUS GRANDE)
+   FORMULAIRES
 ========================= */
 
-.figurine {
-  position: fixed;             
-  top: 20px;                   
-  left: 50%;                   
-  transform: translateX(-50%);
-  width: clamp(200px, 25%, 450px);  /* largeur minimale 200px, max 450px, 25% de l’écran */
-  height: auto;                
-  z-index: 1000;               
-  pointer-events: none;        
-}
-
-/* Ajustement sur mobile */
-@media (max-width: 600px) {
-  .figurine {
-    top: 10px;
-    width: clamp(150px, 40%, 300px); /* un peu plus grande proportionnellement */
-  }
-}
-/* =========================
-   FOOTER
-========================= */
-
-footer {
-  background: #ddd;
-  text-align: center;
-  padding: 15px;
-  font-size: 14px;
-}
-* =========================
-   FORMULAIRES UNIFORMES
-========================= */
-
-main form {
-  max-width: 900px;
-  margin: auto;
-  background: #fff;
-  padding: 30px;
-}
-
-textarea,
-input[type="text"],
-input[type="email"],
-input[type="url"] {
-  width: 100%;
-  padding: 10px;
-  margin: 8px 0 24px 0; /* + espace vertical */
-  border: 1px solid #ccc;
-  border-radius: 4px;
-}
-
-.themes {
-  margin-bottom: 32px; /* + espace après les cases à cocher */
-}
-.themes label {
-  display: inline-block;
-  margin-right: 12px;
-}
-
-button {
-  display: inline-block;
-  background: rgba(255,255,255,0.5);
-  color: #2b1d0f;
-  font-weight: bold;
-  padding: 10px 18px;
-  border-radius: 5px;
-  border: none;
-  font-size: 16px;
-  cursor: pointer;
+form {
   margin-top: 20px;
-  text-align: center;
 }
 
-button:hover {
-  background: rgba(255,255,255,0.7);
+textarea,
+input[type="text"],
+input[type="email"],
+input[type="url"] {
+  width: 100%;
+  padding: 12px;
+  margin: 8px 0 20px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+/* Espacement cases à cocher */
+.themes {
+  margin-bottom: 35px;
+}
+
+.themes label {
+  display: inline-block;
+  margin-right: 14px;
+}
+
+/* Bouton envoyer (même style que retour) */
+form button {
+  background: rgba(255, 255, 255, 0.65);
+  border: none;
+  padding: 12px 22px;
+  border-radius: 12px;
+  font-weight: bold;
+  cursor: pointer;
+  color: #2b1d0f;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+  background: #ddd;
+  text-align: center;
+  padding: 16px;
+  font-size: 14px;
 }
