@@ -32,15 +32,17 @@ a {
 
 header {
   position: relative;
-  text-align: center;
-  padding: 30px 20px 40px;
+  padding: 30px 20px 45px;
   overflow: hidden;
+  text-align: center;
 }
 
-/* Contenu centré du bandeau */
+/* Contenu texte du bandeau */
 .header-contenu {
   position: relative;
-  z-index: 2;
+  z-index: 3;
+  max-width: 700px;
+  margin: 0 auto;
 }
 
 /* Titres bandeau */
@@ -50,21 +52,22 @@ header p {
 }
 
 /* =========================
-   BOUTON ACCUEIL / RETOUR
+   BOUTON ACCUEIL (UNIFIÉ)
 ========================= */
 
 .btn-retour {
   display: inline-block;
   background: rgba(255, 255, 255, 0.65);
-  padding: 10px 18px;
-  border-radius: 12px;
+  padding: 10px 20px;
+  border-radius: 14px;
   font-weight: bold;
   color: #2b1d0f;
   margin-bottom: 14px;
+  font-size: 15px;
 }
 
 /* =========================
-   FIGURINE (UNE SEULE)
+   FIGURINE (UNE SEULE / CENTRÉE TEXTE)
 ========================= */
 
 .figurine {
@@ -72,25 +75,26 @@ header p {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  max-height: 80%;
-  max-width: 220px;
+  max-height: 56%;      /* 🔽 réduction ~30 % */
+  max-width: 160px;    /* 🔽 réduction ~30 % */
   width: auto;
   height: auto;
-  z-index: 1;
+  z-index: 2;
   pointer-events: none;
 }
 
-/* Adaptation écran étroit */
+/* Ajustements responsive */
 @media (max-width: 900px) {
   .figurine {
-    max-width: 180px;
-    opacity: 0.95;
+    max-width: 140px;
+    max-height: 52%;
   }
 }
 
 @media (max-width: 600px) {
   .figurine {
-    max-width: 150px;
+    max-width: 120px;
+    max-height: 48%;
   }
 }
 
@@ -98,12 +102,10 @@ header p {
    COULEURS DES BANDEAUX
 ========================= */
 
-/* Accueil */
 .page-accueil header {
-  background: #8fc8a8; /* vert pastel */
+  background: #8fc8a8;
 }
 
-/* Pages thématiques */
 .page-bricolage header {
   background: #c9a36a;
 }
@@ -212,7 +214,7 @@ input[type="url"] {
 
 /* Espacement cases à cocher */
 .themes {
-  margin-bottom: 35px;
+  margin-bottom: 40px;
 }
 
 .themes label {
@@ -220,12 +222,12 @@ input[type="url"] {
   margin-right: 14px;
 }
 
-/* Bouton envoyer (même style que retour) */
+/* Bouton envoyer = même facture que retour */
 form button {
   background: rgba(255, 255, 255, 0.65);
   border: none;
   padding: 12px 22px;
-  border-radius: 12px;
+  border-radius: 14px;
   font-weight: bold;
   cursor: pointer;
   color: #2b1d0f;
